@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{79b76124-6215-45e7-b400-612c25328880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other">
+      <UniqueIdentifier>{76bed845-ea32-45e0-a23b-d6761540ded5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\math">
+      <UniqueIdentifier>{579108bf-9c47-489c-b012-13a409430cef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="other\glBufferSetups">
+      <UniqueIdentifier>{aef1fd91-8547-4125-bbc8-040aa4163943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{9a4f14b3-257e-47de-9899-9517bc170bfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\entity">
+      <UniqueIdentifier>{04414a9d-99f2-42d2-93fa-1854b17fae8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\entity\entities">
+      <UniqueIdentifier>{5887ce62-5bba-4562-8bfe-01558826f824}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\entity\updater">
+      <UniqueIdentifier>{625d592b-6d60-4d40-bb84-377992d60c9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\entity\updater\src">
+      <UniqueIdentifier>{ea97f89f-69db-487a-abf3-8a647af63558}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\entity\updater\updaters">
+      <UniqueIdentifier>{eb32367b-f01c-4b51-a366-ea17fe64cdc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\renderer">
+      <UniqueIdentifier>{84242af3-af1a-4ca4-88ac-eb8ce07a509f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\renderer\RenderObjects">
+      <UniqueIdentifier>{9218d5a1-152f-467f-b41f-2c1b74a24e96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\renderer\shaders">
+      <UniqueIdentifier>{5f332ebd-8302-4355-9497-3dc728b14237}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\renderer\dataParser">
+      <UniqueIdentifier>{28347bf3-9615-4ec4-bce3-723dff53fdc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\renderer\RenderObjects\abstract">
+      <UniqueIdentifier>{1b5fd7be-e42b-4d06-baf8-0fb86cdee0cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\renderer\shaders\abstract">
+      <UniqueIdentifier>{d05dcecb-3f17-40d1-913e-007b82a3d0c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\entity\entities\base">
+      <UniqueIdentifier>{a7e8f1bf-8e62-4f2e-b0a5-12a188d83e8c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="window.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="app.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="errorhandler.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="setupHandler.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="gameController.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>game\entity\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="source.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="renderer.cpp">
+      <Filter>game\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>game\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="eventHandler.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="vertexArray.cpp">
+      <Filter>other\glBufferSetups</Filter>
+    </ClCompile>
+    <ClCompile Include="vertexBuffer.cpp">
+      <Filter>other\glBufferSetups</Filter>
+    </ClCompile>
+    <ClCompile Include="bufferLayout.cpp">
+      <Filter>other\glBufferSetups</Filter>
+    </ClCompile>
+    <ClCompile Include="abstractShader.cpp">
+      <Filter>game\renderer\shaders\abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="level.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="meshData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modelParser.cpp">
+      <Filter>game\renderer\dataParser</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>game\renderer\dataParser</Filter>
+    </ClCompile>
+    <ClCompile Include="elementBuffer.cpp">
+      <Filter>other\glBufferSetups</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="window.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="app.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="errorhandler.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="setupHandler.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="gameController.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>game\entity\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="renderer.h">
+      <Filter>game\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>game\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="info.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="eventHandler.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="vertexArray.h">
+      <Filter>other\glBufferSetups</Filter>
+    </ClInclude>
+    <ClInclude Include="vertexBuffer.h">
+      <Filter>other\glBufferSetups</Filter>
+    </ClInclude>
+    <ClInclude Include="bufferLayout.h">
+      <Filter>other\glBufferSetups</Filter>
+    </ClInclude>
+    <ClInclude Include="abstractShader.h">
+      <Filter>game\renderer\shaders\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="abstractRenderObject.h">
+      <Filter>game\renderer\RenderObjects\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="abstractEntity.h">
+      <Filter>game\entity\entities\base</Filter>
+    </ClInclude>
+    <ClInclude Include="level.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="basicShader.h">
+      <Filter>game\renderer\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="type.h">
+      <Filter>game\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="meshData.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>game\renderer\dataParser</Filter>
+    </ClInclude>
+    <ClInclude Include="modelParser.h">
+      <Filter>game\renderer\dataParser</Filter>
+    </ClInclude>
+    <ClInclude Include="instancedRenderObject.h">
+      <Filter>game\renderer\RenderObjects\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="elementBuffer.h">
+      <Filter>other\glBufferSetups</Filter>
+    </ClInclude>
+    <ClInclude Include="testRenderObject.h">
+      <Filter>game\renderer\RenderObjects</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
