@@ -2,8 +2,8 @@
 
 #include <iostream>
 
-#include <glew/glew.h>
-#include <SDL/SDL.h>
+#include <gl/glew.h>
+#include <SDL.h>
 
 vertexArray::vertexArray() : vao(0)
 {

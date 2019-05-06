@@ -5,7 +5,7 @@
 #include "elementBuffer.h"
 
 #include <vector>
-#include <glm/glm/vec3.hpp>
+#include <glm/vec3.hpp>
 #include <iostream>
 
 struct vertexData {

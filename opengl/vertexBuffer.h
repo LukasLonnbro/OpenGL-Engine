@@ -1,6 +1,6 @@
 #pragma once
 
-#include <glew/glew.h>
+#include <gl/glew.h>
 
 class vertexBuffer
 {

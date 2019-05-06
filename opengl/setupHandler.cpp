@@ -2,8 +2,8 @@
 #include "errorhandler.h"
 #include "window.h"
 
-#include <SDL/SDL.h>
-#include <glew/glew.h>
+#include <SDL.h>
+#include <gl/glew.h>
 
 #include <iostream>
 #include <string>

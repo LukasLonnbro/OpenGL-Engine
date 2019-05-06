@@ -1,6 +1,6 @@
 #include "eventHandler.h"
 
-#include <SDL/SDL.h>
+#include <SDL.h>
 
 eventBools eventHandler::events;
 

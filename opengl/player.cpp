@@ -5,8 +5,8 @@
 
 #include <iostream>
 
-#include <glew/glew.h>
-#include <glm/glm/gtc/matrix_transform.hpp>
+#include <gl/glew.h>
+#include <glm/gtc/matrix_transform.hpp>
 
 player::player(glm::vec3 position, testRenderObject * renderObject) : abstractEntity(renderObject)
 {
@@ -16,7 +16,6 @@ player::player(glm::vec3 position, testRenderObject * renderObject) : abstractEn
 	modelMatrix = glm::translate(glm::mat4(1.0f), pos);
 	m_RenderObject = renderObject;
 }
-
 
 player::~player()
 {

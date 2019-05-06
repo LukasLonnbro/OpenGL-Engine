@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include <glew/glew.h>
-#include <SDL/SDL.h>
+#include <GL/glew.h>
+#include <SDL.h>
 
 #include "window.h"
 #include "setupHandler.h"

@@ -1,13 +1,20 @@
 #include "abstractShader.h"
 #include "errorhandler.h"
+#include "getExecutablePath.h"
 
-#include <glew/glew.h>
+#include <gl/glew.h>
 
 #include <string>
 #include <vector>
 #include <iostream>
 
 #include <fstream>
+
+std::string shaderPath()
+{
+	return "C:\\Users\\Lukas\\source\\repos\\LukasLonnbro\\OpenGL-Engine\\Debug\\deps\\shaders\\";
+	//return getExecutableDirPath() + "\\deps\\shaders\\";
+}
 
 std::string readFromFile(std::string filePath) {
 	std::string contents;
@@ -34,8 +41,8 @@ std::string readFromFile(std::string filePath) {
 void abstractShader::compileAndLink(const std::string vertPath, const std::string fragPath)
 {
 	// Read our shaders into the appropriate buffers
-	std::string vertexSource = readFromFile(vertPath);// Get source code for vertex shader.
-	std::string fragmentSource = readFromFile(fragPath);// Get source code for fragment shader.
+	std::string vertexSource = readFromFile(shaderPath() + vertPath);// Get source code for vertex shader.
+	std::string fragmentSource = readFromFile(shaderPath() + fragPath);// Get source code for fragment shader.
 
 	// Create an empty vertex shader handle
 	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);

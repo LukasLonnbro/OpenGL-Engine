@@ -1,6 +1,6 @@
 #include "elementBuffer.h"
 
-#include <glew/glew.h>
+#include <gl/glew.h>
 #include <iostream>
 
 elementBuffer::elementBuffer(const void* indices, const int& size)

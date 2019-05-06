@@ -19,7 +19,8 @@ to the physics engine who interracts with the entities updaters.
 level::level()
 {
 	basicShader * shader = new basicShader();
-	testRenderObject * m_TestRenderObject = new testRenderObject(shader, "C:\\Users\\Lukas\\source\\repos\\opengl\\opengl\\deps\\models\\triangle.obj");
+	testRenderObject * m_TestRenderObject = new testRenderObject(shader,
+		"C:\\Users\\Lukas\\source\\repos\\LukasLonnbro\\OpenGL-Engine\\Debug\\deps\\models\\teapot.obj");
 
 	m_RenderObjects.push_back(m_TestRenderObject);
 	m_Shaders.push_back(shader);
@@ -41,7 +42,6 @@ level::~level()
 
 	for (unsigned int i = 0; i < m_RenderObjects.size(); i++)
 		delete m_RenderObjects[i];
-
 }
 
 void level::update()

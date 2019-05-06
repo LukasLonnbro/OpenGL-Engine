@@ -69,10 +69,12 @@ void modelParser::processMesh(const aiMesh * inMesh, const aiScene * scene)
 		vector.z = inMesh->mVertices[i].z;
 		vertex.position = vector;
 
-		vector.x = inMesh->mNormals[i].x;
-		vector.y = inMesh->mNormals[i].y;
-		vector.z = inMesh->mNormals[i].z;
-		vertex.normal = vector;
+		if (inMesh->HasNormals()) {
+			vector.x = inMesh->mNormals[i].x;
+			vector.y = inMesh->mNormals[i].y;
+			vector.z = inMesh->mNormals[i].z;
+			vertex.normal = vector;
+		}
 
 		vertices.push_back(vertex);
 	}

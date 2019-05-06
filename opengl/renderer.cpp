@@ -2,9 +2,10 @@
 
 #include <iostream>
 
-#include <glew/glew.h>
-#include <glm/glm/gtc/type_ptr.hpp>
-#include <glm/glm/gtx/string_cast.hpp>
+#include <GL/glew.h>
+#include <glm/gtc/type_ptr.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <glm/gtx/string_cast.hpp>
 
 
 renderer::renderer()
@@ -38,8 +39,7 @@ void renderer::render()
 	glm::mat4 projMat = (*m_Camera.getProjectionMatrix());
 	glm::mat4 modelMat = glm::mat4(1.0f);
 
-	for (unsigned int i = 0; i < m_Entities.size(); i++)
-	{
+	for (unsigned int i = 0; i < m_Entities.size(); i++) {
 		//std::cout << "New binds.\n";
 		abstractShader shader = *(m_Entities)[i][0]->getShader();
 		abstractRenderObject renderObject = *(m_Entities)[i][0]->getRenderObject();
@@ -49,8 +49,7 @@ void renderer::render()
 		shader.setMat4("projection", glm::value_ptr(projMat));
 
 		int size = m_Entities[i].size();
-		for (int j = 0; j < size; j++)
-		{
+		for (int j = 0; j < size; j++) {
 			renderObject.renderMeshes();
 		}
 	}
@@ -75,12 +74,10 @@ void renderer::sortByRenderObject(const std::vector<abstractEntity*> * entities)
 	abstractEntity * previous = current; 
 	for (unsigned int i = 0; i < entities->size(); i++) {
 		current = (*entities)[i];
-		if (typeid(current) == typeid(previous))
-		{
+		if (typeid(current) == typeid(previous)) {
 			temp.push_back(current);
 		}
-		else
-		{
+		else {
 			m_Entities.push_back(temp);
 			temp.clear();
 		}

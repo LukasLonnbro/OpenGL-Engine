@@ -8,8 +8,8 @@
 #include <iostream>
 #include <string>
 
-#include <glew/glew.h>
-#include <SDL/SDL.h>
+#include <gl/glew.h>
+#include <SDL.h>
 
 #include "info.h"
 
@@ -47,7 +47,8 @@ int gameController::update()
 	return 1;
 }
 
-void gameController::run() {
+void gameController::run() 
+{
 	m_Level.update();
 
 	const std::vector<abstractEntity*> * entities = m_Level.getEntities();
@@ -59,8 +60,7 @@ void gameController::run() {
 		m_Renderer.render();
 
 		int curTick = SDL_GetTicks();
-		if (curTick - frameTick >= 1000)
-		{
+		if (curTick - frameTick >= 1000) {
 			std::cout << "FPS: " << frames << std::endl;
 			frames = 0;
 

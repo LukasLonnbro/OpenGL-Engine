@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-#include <glew/glew.h>
+#include <gl/glew.h>
 
 Mesh::Mesh(const std::vector<vertexData>& vertices, const std::vector<unsigned int>& indices) :
 	m_Vertices(vertices),

@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include <SDL/SDL.h>
+#include <SDL.h>
 
 //SETS UP SDL OPENGL WINDOW.
 //NOTE TO SELF: Requires proper SDL_OPENGL flags to be already set up. 

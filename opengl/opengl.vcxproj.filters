@@ -45,20 +45,20 @@
     <Filter Include="game\renderer\RenderObjects">
       <UniqueIdentifier>{9218d5a1-152f-467f-b41f-2c1b74a24e96}</UniqueIdentifier>
     </Filter>
-    <Filter Include="game\renderer\shaders">
-      <UniqueIdentifier>{5f332ebd-8302-4355-9497-3dc728b14237}</UniqueIdentifier>
-    </Filter>
     <Filter Include="game\renderer\dataParser">
       <UniqueIdentifier>{28347bf3-9615-4ec4-bce3-723dff53fdc3}</UniqueIdentifier>
     </Filter>
     <Filter Include="game\renderer\RenderObjects\abstract">
       <UniqueIdentifier>{1b5fd7be-e42b-4d06-baf8-0fb86cdee0cb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="game\renderer\shaders\abstract">
-      <UniqueIdentifier>{d05dcecb-3f17-40d1-913e-007b82a3d0c5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="game\entity\entities\base">
       <UniqueIdentifier>{a7e8f1bf-8e62-4f2e-b0a5-12a188d83e8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\renderer\RenderObjects\shaders">
+      <UniqueIdentifier>{5f332ebd-8302-4355-9497-3dc728b14237}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\renderer\RenderObjects\shaders\abstract">
+      <UniqueIdentifier>{d05dcecb-3f17-40d1-913e-007b82a3d0c5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -102,7 +102,7 @@
       <Filter>other\glBufferSetups</Filter>
     </ClCompile>
     <ClCompile Include="abstractShader.cpp">
-      <Filter>game\renderer\shaders\abstract</Filter>
+      <Filter>game\renderer\RenderObjects\shaders\abstract</Filter>
     </ClCompile>
     <ClCompile Include="level.cpp">
       <Filter>game</Filter>
@@ -161,7 +161,7 @@
       <Filter>other\glBufferSetups</Filter>
     </ClInclude>
     <ClInclude Include="abstractShader.h">
-      <Filter>game\renderer\shaders\abstract</Filter>
+      <Filter>game\renderer\RenderObjects\shaders\abstract</Filter>
     </ClInclude>
     <ClInclude Include="abstractRenderObject.h">
       <Filter>game\renderer\RenderObjects\abstract</Filter>
@@ -173,7 +173,7 @@
       <Filter>game</Filter>
     </ClInclude>
     <ClInclude Include="basicShader.h">
-      <Filter>game\renderer\shaders</Filter>
+      <Filter>game\renderer\RenderObjects\shaders</Filter>
     </ClInclude>
     <ClInclude Include="type.h">
       <Filter>game\entity</Filter>
@@ -196,5 +196,11 @@
     <ClInclude Include="testRenderObject.h">
       <Filter>game\renderer\RenderObjects</Filter>
     </ClInclude>
+    <ClInclude Include="getExecutablePath.h">
+      <Filter>other</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

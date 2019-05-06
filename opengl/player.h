@@ -3,7 +3,7 @@
 #include "abstractEntity.h"
 #include "testRenderObject.h"
 
-#include <glm/glm/mat4x4.hpp>
+#include <glm/mat4x4.hpp>
 
 class player : public abstractEntity
 {

@@ -1,8 +1,8 @@
 #include "camera.h"
 
-#include <glm/glm/glm.hpp>
-#include <glm/glm/gtc/matrix_transform.hpp>
-#include <SDL/SDL.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <SDL.h>
 
 #include "info.h"
 #include "eventHandler.h"

@@ -6,7 +6,7 @@
 #include <string>
 #include <iostream>
 
-#include <glew/glew.h>
+#include <gl/glew.h>
 
 /*app::app(window aWindow) : mainController(aWindow)
 {
