@@ -1,6 +1,6 @@
 #include "abstractShader.h"
 #include "errorhandler.h"
-#include "getExecutablePath.h"
+#include "paths.h"
 
 #include <gl/glew.h>
 
@@ -12,8 +12,7 @@
 
 std::string shaderPath()
 {
-	return "C:\\Users\\Lukas\\source\\repos\\LukasLonnbro\\OpenGL-Engine\\Debug\\deps\\shaders\\";
-	//return getExecutableDirPath() + "\\deps\\shaders\\";
+	return paths::getShaderPath();
 }
 
 std::string readFromFile(std::string filePath) {

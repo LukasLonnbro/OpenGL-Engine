@@ -1,5 +1,4 @@
 #pragma once
-#include "meshData.h"
 #include "Mesh.h"
 
 #include <assimp/scene.h>

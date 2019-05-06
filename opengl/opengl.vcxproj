@@ -131,7 +131,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="app.cpp" />
     <ClCompile Include="bufferLayout.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="elementBuffer.cpp" />
@@ -140,7 +139,6 @@
     <ClCompile Include="eventHandler.cpp" />
     <ClCompile Include="gameController.cpp" />
     <ClCompile Include="level.cpp" />
-    <ClCompile Include="meshData.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="renderer.cpp" />
     <ClCompile Include="setupHandler.cpp" />
@@ -153,22 +151,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="abstractRenderObject.h" />
-    <ClInclude Include="app.h" />
     <ClInclude Include="basicShader.h" />
     <ClInclude Include="bufferLayout.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="elementBuffer.h" />
-    <ClInclude Include="getExecutablePath.h" />
     <ClInclude Include="instancedRenderObject.h" />
     <ClInclude Include="modelParser.h" />
     <ClInclude Include="abstractEntity.h" />
     <ClInclude Include="errorhandler.h" />
     <ClInclude Include="eventHandler.h" />
     <ClInclude Include="gameController.h" />
-    <ClInclude Include="info.h" />
+    <ClInclude Include="constants.h" />
     <ClInclude Include="level.h" />
     <ClInclude Include="Mesh.h" />
-    <ClInclude Include="meshData.h" />
+    <ClInclude Include="paths.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="renderer.h" />
     <ClInclude Include="setupHandler.h" />
@@ -190,7 +186,7 @@
     <Import Project="..\packages\sdl2.2.0.5\build\native\sdl2.targets" Condition="Exists('..\packages\sdl2.2.0.5\build\native\sdl2.targets')" />
     <Import Project="..\packages\Assimp.redist.3.0.0\build\native\Assimp.redist.targets" Condition="Exists('..\packages\Assimp.redist.3.0.0\build\native\Assimp.redist.targets')" />
     <Import Project="..\packages\Assimp.3.0.0\build\native\Assimp.targets" Condition="Exists('..\packages\Assimp.3.0.0\build\native\Assimp.targets')" />
-    <Import Project="..\packages\glm.0.9.9.400\build\native\glm.targets" Condition="Exists('..\packages\glm.0.9.9.400\build\native\glm.targets')" />
+    <Import Project="..\packages\glm.0.9.9.500\build\native\glm.targets" Condition="Exists('..\packages\glm.0.9.9.500\build\native\glm.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -202,6 +198,6 @@
     <Error Condition="!Exists('..\packages\sdl2.2.0.5\build\native\sdl2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sdl2.2.0.5\build\native\sdl2.targets'))" />
     <Error Condition="!Exists('..\packages\Assimp.redist.3.0.0\build\native\Assimp.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Assimp.redist.3.0.0\build\native\Assimp.redist.targets'))" />
     <Error Condition="!Exists('..\packages\Assimp.3.0.0\build\native\Assimp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Assimp.3.0.0\build\native\Assimp.targets'))" />
-    <Error Condition="!Exists('..\packages\glm.0.9.9.400\build\native\glm.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\glm.0.9.9.400\build\native\glm.targets'))" />
+    <Error Condition="!Exists('..\packages\glm.0.9.9.500\build\native\glm.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\glm.0.9.9.500\build\native\glm.targets'))" />
   </Target>
 </Project>

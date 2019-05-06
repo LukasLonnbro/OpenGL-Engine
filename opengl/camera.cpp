@@ -4,7 +4,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <SDL.h>
 
-#include "info.h"
+#include "constants.h"
 #include "eventHandler.h"
 
 #include <iostream>
@@ -68,8 +68,8 @@ void camera::rotateByMouse()
 {
 	//std::cout << "MusePos: " << eventHandler::getEvents()->mouseX << " | " << eventHandler::getEvents()->mouseX << std::endl;
 
-	int deltaX = evt->mouseX - (info::WIDTH() / 2);
-	int deltaY = (info::HEIGHT() / 2) - evt->mouseY;
+	float deltaX = evt->mouseX - (info::WIDTH() / 2);
+	float deltaY = (info::HEIGHT() / 2) - evt->mouseY;
 
 	directionY += deltaY * sensitivity;
 	directionX += deltaX * sensitivity;

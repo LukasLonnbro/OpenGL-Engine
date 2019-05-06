@@ -1,6 +1,5 @@
 #pragma once
-
-#include "info.h"
+#include "constants.h"
 
 #define evt eventHandler::getEvents()
 
@@ -19,4 +18,5 @@ public:
 private:
 	static eventBools events;
 };
+
 

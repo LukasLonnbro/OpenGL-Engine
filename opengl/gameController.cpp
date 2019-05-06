@@ -1,6 +1,7 @@
 #include "gameController.h"
 #include "eventHandler.h"
 #include "abstractRenderObject.h"
+#include "constants.h"
 
 //#include "entity.h"
 //#include "eventHandler.h
@@ -11,7 +12,7 @@
 #include <gl/glew.h>
 #include <SDL.h>
 
-#include "info.h"
+
 
 // --- CURRENT IDEAS ---
 

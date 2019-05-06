@@ -65,9 +65,6 @@
     <ClCompile Include="window.cpp">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="app.cpp">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="errorhandler.cpp">
       <Filter>core</Filter>
     </ClCompile>
@@ -107,9 +104,6 @@
     <ClCompile Include="level.cpp">
       <Filter>game</Filter>
     </ClCompile>
-    <ClCompile Include="meshData.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="modelParser.cpp">
       <Filter>game\renderer\dataParser</Filter>
     </ClCompile>
@@ -122,9 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="app.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="errorhandler.h">
@@ -144,9 +135,6 @@
     </ClInclude>
     <ClInclude Include="camera.h">
       <Filter>game\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="info.h">
-      <Filter>source</Filter>
     </ClInclude>
     <ClInclude Include="eventHandler.h">
       <Filter>core</Filter>
@@ -178,9 +166,6 @@
     <ClInclude Include="type.h">
       <Filter>game\entity</Filter>
     </ClInclude>
-    <ClInclude Include="meshData.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="Mesh.h">
       <Filter>game\renderer\dataParser</Filter>
     </ClInclude>
@@ -196,7 +181,10 @@
     <ClInclude Include="testRenderObject.h">
       <Filter>game\renderer\RenderObjects</Filter>
     </ClInclude>
-    <ClInclude Include="getExecutablePath.h">
+    <ClInclude Include="constants.h">
+      <Filter>other</Filter>
+    </ClInclude>
+    <ClInclude Include="paths.h">
       <Filter>other</Filter>
     </ClInclude>
   </ItemGroup>

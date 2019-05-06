@@ -1,9 +1,10 @@
 #pragma once
 
-#include "window.h"
+#include <Shlwapi.h>
+#include <string>
 
-class info {
-public: 
+static struct info 
+{
 	static inline float WIDTH() { return 640; };
 	static inline float HEIGHT() { return 480; };
 
@@ -11,7 +12,9 @@ public:
 	static inline float scrHEIGHT() { return 1080; };
 };
 
-struct eventBools {
+
+struct eventBools
+{
 	bool w;
 	bool s;
 	bool a;

@@ -5,8 +5,8 @@
 
 #include "window.h"
 #include "setupHandler.h"
-#include "app.h"
-#include "info.h"
+#include "gameController.h"
+#include "constants.h"
 
 #undef main
 
