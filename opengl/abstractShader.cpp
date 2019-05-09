@@ -173,10 +173,11 @@ void abstractShader::setBool(const char* name, const unsigned char boolean) cons
 	glUniform1i(glGetUniformLocation(shaderProgram, name), boolean);
 }
 
-void abstractShader::use() {
+void abstractShader::use() const
+{
 	glUseProgram(shaderProgram);	// Don't leak shaders either.
-	
 }
-void abstractShader::unUse() {
+void abstractShader::unUse() const
+{
 	glUseProgram(0);
 }

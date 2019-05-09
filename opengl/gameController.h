@@ -1,6 +1,5 @@
 #pragma once
 
-#include "level.h"
 #include "renderer.h"
 #include "window.h"
 
@@ -15,7 +14,6 @@ public:
 
 private: 
 	const window * m_Window;
-	level m_Level;
 	renderer m_Renderer;
 
 	int lastTick;

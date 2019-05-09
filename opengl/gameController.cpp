@@ -2,6 +2,7 @@
 #include "eventHandler.h"
 #include "abstractRenderObject.h"
 #include "constants.h"
+#include "dataManager.h"
 
 //#include "entity.h"
 //#include "eventHandler.h
@@ -50,15 +51,23 @@ int gameController::update()
 
 void gameController::run() 
 {
-	m_Level.update();
+	dataManager data;
+	data.loadEntities();
 
-	const std::vector<abstractEntity*> * entities = m_Level.getEntities();
-	m_Renderer.updateEntities(entities);
+	const std::vector<abstractEntity> entities = *data.getEntities();
+	//m_Renderer.prep(entities);
 	
+	abstractRenderObject x = *entities[0].getRenderObject();
+	x.coutsomethingrandom();
+	std::cout << x.getShader();
+	
+	int a;
+	std::cin >> a;
+
 	while (true) {
 		eventHandler::update();
 
-		m_Renderer.render();
+		//m_Renderer.render();
 
 		int curTick = SDL_GetTicks();
 		if (curTick - frameTick >= 1000) {

@@ -10,6 +10,8 @@
 
 #undef main
 
+#define STATIC_ALLOC
+
 int main() {
 	std::cout << "Hello world\n";
 	

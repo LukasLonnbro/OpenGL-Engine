@@ -24,9 +24,9 @@ public:
 		m_Indices = other.getIndices(); 
 		setupMesh();
 	}
-	~Mesh() { std::cout << "Deleting Mesh."; }
+	~Mesh() { std::cout << "Deleting Mesh.\n"; }
 
-	void draw();
+	void draw() const;
 
 	const inline std::vector<vertexData> getVertices() const { return m_Vertices; };
 	const inline std::vector<unsigned int> getIndices() const { return m_Indices; };

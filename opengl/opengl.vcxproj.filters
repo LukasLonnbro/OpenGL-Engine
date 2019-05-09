@@ -54,10 +54,10 @@
     <Filter Include="game\entity\entities\base">
       <UniqueIdentifier>{a7e8f1bf-8e62-4f2e-b0a5-12a188d83e8c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="game\renderer\RenderObjects\shaders">
+    <Filter Include="game\renderer\shaders">
       <UniqueIdentifier>{5f332ebd-8302-4355-9497-3dc728b14237}</UniqueIdentifier>
     </Filter>
-    <Filter Include="game\renderer\RenderObjects\shaders\abstract">
+    <Filter Include="game\renderer\shaders\abstract">
       <UniqueIdentifier>{d05dcecb-3f17-40d1-913e-007b82a3d0c5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -83,9 +83,6 @@
     <ClCompile Include="renderer.cpp">
       <Filter>game\renderer</Filter>
     </ClCompile>
-    <ClCompile Include="camera.cpp">
-      <Filter>game\renderer</Filter>
-    </ClCompile>
     <ClCompile Include="eventHandler.cpp">
       <Filter>core</Filter>
     </ClCompile>
@@ -99,10 +96,7 @@
       <Filter>other\glBufferSetups</Filter>
     </ClCompile>
     <ClCompile Include="abstractShader.cpp">
-      <Filter>game\renderer\RenderObjects\shaders\abstract</Filter>
-    </ClCompile>
-    <ClCompile Include="level.cpp">
-      <Filter>game</Filter>
+      <Filter>game\renderer\shaders\abstract</Filter>
     </ClCompile>
     <ClCompile Include="modelParser.cpp">
       <Filter>game\renderer\dataParser</Filter>
@@ -112,6 +106,12 @@
     </ClCompile>
     <ClCompile Include="elementBuffer.cpp">
       <Filter>other\glBufferSetups</Filter>
+    </ClCompile>
+    <ClCompile Include="dataManager.cpp">
+      <Filter>game\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>game\renderer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -149,7 +149,7 @@
       <Filter>other\glBufferSetups</Filter>
     </ClInclude>
     <ClInclude Include="abstractShader.h">
-      <Filter>game\renderer\RenderObjects\shaders\abstract</Filter>
+      <Filter>game\renderer\shaders\abstract</Filter>
     </ClInclude>
     <ClInclude Include="abstractRenderObject.h">
       <Filter>game\renderer\RenderObjects\abstract</Filter>
@@ -157,11 +157,8 @@
     <ClInclude Include="abstractEntity.h">
       <Filter>game\entity\entities\base</Filter>
     </ClInclude>
-    <ClInclude Include="level.h">
-      <Filter>game</Filter>
-    </ClInclude>
     <ClInclude Include="basicShader.h">
-      <Filter>game\renderer\RenderObjects\shaders</Filter>
+      <Filter>game\renderer\shaders</Filter>
     </ClInclude>
     <ClInclude Include="type.h">
       <Filter>game\entity</Filter>
@@ -171,9 +168,6 @@
     </ClInclude>
     <ClInclude Include="modelParser.h">
       <Filter>game\renderer\dataParser</Filter>
-    </ClInclude>
-    <ClInclude Include="instancedRenderObject.h">
-      <Filter>game\renderer\RenderObjects\abstract</Filter>
     </ClInclude>
     <ClInclude Include="elementBuffer.h">
       <Filter>other\glBufferSetups</Filter>
@@ -186,6 +180,12 @@
     </ClInclude>
     <ClInclude Include="paths.h">
       <Filter>other</Filter>
+    </ClInclude>
+    <ClInclude Include="dataManager.h">
+      <Filter>game\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="instancedRenderObject.h">
+      <Filter>game\renderer\RenderObjects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

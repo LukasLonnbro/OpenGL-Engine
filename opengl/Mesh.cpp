@@ -30,7 +30,7 @@ void Mesh::setupMesh()
 	va.addBuffer(vb, bl);
 }
 
-void Mesh::draw() 
+void Mesh::draw() const
 {
 	va.bind();
 	glDrawElements(GL_TRIANGLES, m_Indices.size(), GL_UNSIGNED_INT, 0);

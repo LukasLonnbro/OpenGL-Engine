@@ -13,13 +13,13 @@ public:
 	~renderer();
 
 	void render();
-	void updateEntities(const std::vector<abstractEntity*> * entities);
+	void prep(const std::vector<abstractEntity> * entities);
 private: 
-	void sortByRenderObject(const std::vector<abstractEntity*> * entities);
-	void sortByShader();
-	void sortByVa();
+	void sortByRenderObject(const std::vector<abstractEntity> * entities);
+	void sortByShader() {}
+	void sortByVa() {}
 
 	camera m_Camera;
-	std::vector<std::vector<abstractEntity*>> m_Entities;
+	std::vector<std::vector<const abstractEntity*>> sortedEntities;
 };
 

@@ -13,7 +13,7 @@ elementBuffer::elementBuffer(const void* indices, const int& size)
 }
 elementBuffer::~elementBuffer()
 {
-	std::cout << "Deleteing elementBuffer.";
+	std::cout << "Deleteing elementBuffer.\n";
 	glDeleteBuffers(1, &eb);
 }
 

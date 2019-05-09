@@ -13,13 +13,13 @@
 class abstractRenderObject
 {
 public:
-	abstractRenderObject(const abstractShader * shader, const char* modelPath) : m_Shader(shader), path(modelPath) 
+	abstractRenderObject(abstractShader * shader, const char* modelPath) : m_Shader(shader), path(modelPath)
 	{
 		modelParser parser(path);
 		m_Meshes = parser.loadModel();
 	}
 
-	virtual void renderMeshes() 
+	virtual void renderMeshes() const
 	{
 		for (unsigned int i = 0; i < m_Meshes.size(); i++)
 		{
@@ -28,14 +28,16 @@ public:
 		}
 	}
 
-	virtual inline const abstractShader * getShader() { return m_Shader; }
-	void setModelMat(glm::mat4 mat) { m_Model = mat; }
+	virtual inline const abstractShader * getShader() const { return m_Shader; }
+	virtual void setModelMat(glm::mat4 mat) { m_Model = mat; }
+
+	virtual void coutsomethingrandom() { std::cout << "stuff\n"; }
 
 protected: 
 	const char* path;
 
 	glm::mat4 m_Model;
-	const abstractShader * m_Shader;
+	abstractShader * m_Shader;
 	std::vector<Mesh> m_Meshes;
 };  
 

@@ -25,7 +25,32 @@ renderer::~renderer()
 // The renderer should only work with models that are in work memory. FOr smaller games essentially all models can be loaded into memory at once.
 // For larger games with more complex models, this has to be done during in game loading phases.
 
-// TLDR: Renderer grabs renderObjects, sorts bindable objects in a manner that reduces necessary binds. 
+// TLDR: Renderer grabs renderObjects, sorts bindable objects in a manner that reduces necessary binds, 
+// and ships it off to the datamanager for data storage management.
+
+void renderer::prep(const std::vector<abstractEntity> *entities)
+{
+	sortByRenderObject(entities);
+}
+void renderer::sortByRenderObject(const std::vector<abstractEntity> *entities)
+{
+	std::vector<const abstractEntity *> temp;
+	const abstractEntity *current, *previous = &(*entities)[0];
+
+	//Should be a linked list at sorting, and then copied over to a vector.
+	//Also presumes all entities are created in order, doesn't 
+	for (unsigned int i = 0; i < entities->size(); i++) {
+		current = &(*entities)[i];
+		if (typeid(current) == typeid(previous)) {
+			temp.push_back(current);
+		}
+		else {
+			sortedEntities.push_back(temp);
+			temp.clear();
+		}
+	}
+	sortedEntities.push_back(temp);
+}
 
 
 void renderer::render()
@@ -39,48 +64,20 @@ void renderer::render()
 	glm::mat4 projMat = (*m_Camera.getProjectionMatrix());
 	glm::mat4 modelMat = glm::mat4(1.0f);
 
-	for (unsigned int i = 0; i < m_Entities.size(); i++) {
-		//std::cout << "New binds.\n";
-		abstractShader shader = *(m_Entities)[i][0]->getShader();
-		abstractRenderObject renderObject = *(m_Entities)[i][0]->getRenderObject();
+	for (unsigned int i = 0; i < sortedEntities.size(); i++) {
+		//std::cout << "New shaders binds.\n";
 
-		shader.use();
-		shader.setMat4("view", glm::value_ptr(viewMat));
-		shader.setMat4("projection", glm::value_ptr(projMat));
+		//Unnecessary copy
+		const abstractRenderObject * renderObject = sortedEntities[i][0]->getRenderObject();
+		const abstractShader * shader = renderObject->getShader();
+		
+		shader->use();
+		shader->setMat4("view", glm::value_ptr(viewMat));
+		shader->setMat4("projection", glm::value_ptr(projMat));
 
-		int size = m_Entities[i].size();
+		int size = sortedEntities[i].size();
 		for (int j = 0; j < size; j++) {
-			renderObject.renderMeshes();
+			renderObject->renderMeshes();
 		}
 	}
-}
-
-void renderer::updateEntities(const std::vector<abstractEntity*> * entities)
-{
-	sortByRenderObject(entities);
-}
-void renderer::sortByVa()
-{
-}
-void renderer::sortByShader()
-{
-}
-
-
-void renderer::sortByRenderObject(const std::vector<abstractEntity*> * entities)
-{
-	std::vector<abstractEntity*> temp;
-	abstractEntity * current = (*entities)[0];
-	abstractEntity * previous = current; 
-	for (unsigned int i = 0; i < entities->size(); i++) {
-		current = (*entities)[i];
-		if (typeid(current) == typeid(previous)) {
-			temp.push_back(current);
-		}
-		else {
-			m_Entities.push_back(temp);
-			temp.clear();
-		}
-	}
-	m_Entities.push_back(temp);
 }

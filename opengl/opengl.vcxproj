@@ -133,12 +133,12 @@
   <ItemGroup>
     <ClCompile Include="bufferLayout.cpp" />
     <ClCompile Include="camera.cpp" />
+    <ClCompile Include="dataManager.cpp" />
     <ClCompile Include="elementBuffer.cpp" />
     <ClCompile Include="modelParser.cpp" />
     <ClCompile Include="errorhandler.cpp" />
     <ClCompile Include="eventHandler.cpp" />
     <ClCompile Include="gameController.cpp" />
-    <ClCompile Include="level.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="renderer.cpp" />
     <ClCompile Include="setupHandler.cpp" />
@@ -154,6 +154,7 @@
     <ClInclude Include="basicShader.h" />
     <ClInclude Include="bufferLayout.h" />
     <ClInclude Include="camera.h" />
+    <ClInclude Include="dataManager.h" />
     <ClInclude Include="elementBuffer.h" />
     <ClInclude Include="instancedRenderObject.h" />
     <ClInclude Include="modelParser.h" />
@@ -162,7 +163,6 @@
     <ClInclude Include="eventHandler.h" />
     <ClInclude Include="gameController.h" />
     <ClInclude Include="constants.h" />
-    <ClInclude Include="level.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="paths.h" />
     <ClInclude Include="player.h" />

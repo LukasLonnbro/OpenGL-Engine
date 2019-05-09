@@ -6,14 +6,14 @@
 //Create local pointer which points to a constant value, upon buffer update, simply change what the pointer points to. (?)
 vertexBuffer::vertexBuffer(const void* data, unsigned int size)
 {
-	std::cout << "Creating vertexBuffer.";
+	std::cout << "Creating vertexBuffer.\n";
 	glGenBuffers(1, &vb);
 	bind();
 	glBufferData(GL_ARRAY_BUFFER, size, data, GL_STATIC_DRAW);
 }
 vertexBuffer::~vertexBuffer()
 {
-	std::cout << "Deleteing vertexBuffer.";
+	std::cout << "Deleteing vertexBuffer.\n";
 	glDeleteBuffers(1, &vb);
 }
 void vertexBuffer::bind() const

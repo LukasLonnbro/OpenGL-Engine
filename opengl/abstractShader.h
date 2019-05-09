@@ -6,8 +6,8 @@
 {
 public:
 	void compileAndLink(const std::string vertPath, const std::string fragPath);
-	void use();
-	void unUse();
+	void use() const;
+	void unUse() const;
 
 	// Replace with meta programming. 
 	void setFloat(const char *, const float value) const;
