@@ -48,7 +48,7 @@ void dataManager::loadEntities()
 	shaderPrograms.push_back(shader);
 	
 	testRenderObject * m_TestRenderObject = new testRenderObject(shaderPrograms[0],
-		"C:\\Users\\Lukas\\source\\repos\\LukasLonnbro\\OpenGL-Engine\\Debug\\deps\\models\\teapot.obj");
+		"C:\\Users\\Lukas\\source\\repos\\LukasLonnbro\\OpenGL-Engine\\deps\\models\\teapot.obj");
 
 	player m_Player(glm::vec3(0.0f), m_TestRenderObject);
 
