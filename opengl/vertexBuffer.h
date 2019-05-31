@@ -2,12 +2,12 @@
 
 #include <gl/glew.h>
 
-class vertexBuffer
+class VertexBuffer
 {
 public:
-	vertexBuffer(const void * const data, unsigned int size);
+	VertexBuffer(const void * data, unsigned int size);
 	//vertexBuffer(const vertexBuffer& vb);
-	~vertexBuffer(); 
+	~VertexBuffer(); 
 
 	void bind() const;
 private:

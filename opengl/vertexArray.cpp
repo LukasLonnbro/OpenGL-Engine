@@ -5,26 +5,28 @@
 #include <gl/glew.h>
 #include <SDL.h>
 
-vertexArray::vertexArray() : vao(0)
+VertexArray::VertexArray() : vao(0)
 {
-	std::cout << "Creating vertex array: ";
+	std::cout << "VertexArray constructor.\n";
 	glGenVertexArrays(1, &vao);
-	std::cout << vao << std::endl;
 	bind();
 }
-vertexArray::~vertexArray()
+VertexArray::VertexArray(const VertexArray &other) 
 {
-	std::cout << "Deleting va: ";
-	std::cout << vao << std::endl;
+	std::cout << "VertexArray copy constructor.\n";
+	vao = other.getID();
+}
+VertexArray::~VertexArray()
+{
+	std::cout << "VertexArray destructor.\n";
 	glDeleteVertexArrays(1, &vao);
 }
-
-void vertexArray::bind() const
+void VertexArray::bind() const
 {
 	glBindVertexArray(vao);
 }
 
-void vertexArray::addBuffer(const vertexBuffer& vb, const bufferLayout& layout)
+void VertexArray::addBuffer(const VertexBuffer& vb, const BufferLayout& layout)
 {
 	bind();
 	vb.bind();
@@ -34,9 +36,7 @@ void vertexArray::addBuffer(const vertexBuffer& vb, const bufferLayout& layout)
 	{
 		const auto& attribute = attributes[i];
 		glEnableVertexAttribArray(i);
-		glVertexAttribPointer(i, attribute.count, GL_FLOAT, attribute.normalized ? GL_FALSE : GL_TRUE, layout.getStride(), (char*)offset);
-		offset += layout.getTypeSize(attribute.type) * attribute.count;
+		glVertexAttribPointer(i, attribute.count, attribute.type, (attribute.normalized ? GL_FALSE : GL_TRUE), layout.getStride(), (void*)offset);
+		offset += layout.getTypeSize(attribute.type, attribute.count);
 	}
-
-	vbs.push_back(vb);
 }

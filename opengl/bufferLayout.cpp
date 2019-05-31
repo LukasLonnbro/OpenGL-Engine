@@ -2,16 +2,16 @@
 
 #include <iostream>
 
-bufferLayout::bufferLayout()
+BufferLayout::BufferLayout()
 {
 }
 
 
-bufferLayout::~bufferLayout()
+BufferLayout::~BufferLayout()
 {
 }
 
-void bufferLayout::tellMe()
+void BufferLayout::tellMe()
 {
 	int size = elements.size();
 	std::cout << "---\n" << size << " objects in layoutHolder:\n";

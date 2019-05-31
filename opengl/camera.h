@@ -11,9 +11,11 @@ public:
 	void update();
 
 	//change to glm::value_ptr
-	const glm::mat4 * const getViewMatrix() { return &viewMatrix; };
-	const glm::mat4 * const getProjectionMatrix() { return &projectionMatrix; };
-	const glm::vec3 * const getPos() { return &pos; };
+	const glm::mat4 * getViewMatrix() const { return &viewMatrix; };
+	const glm::mat4 * getProjectionMatrix() const { return &projectionMatrix; };
+	
+	const glm::vec3* getPos() const { return &pos; }
+	const glm::vec3* getDir() const { return &front; }
 
 private:
 	glm::mat4 viewMatrix;

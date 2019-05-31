@@ -1,13 +1,15 @@
 #pragma once
-class elementBuffer
+class ElementBuffer
 {
 public:
-	elementBuffer(const void* indices, const int& size);
-	~elementBuffer();
+	ElementBuffer(const void* indices, const int& size, unsigned int count);
+	~ElementBuffer();
 
 	void bind();
+	unsigned int getCount() const { return count; }
 
 private:
 	unsigned int eb;
+	unsigned int count;
 };
 

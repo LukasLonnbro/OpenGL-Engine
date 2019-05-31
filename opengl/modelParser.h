@@ -13,12 +13,13 @@ public:
 	modelParser(const char* modelPath);
 	~modelParser();
 
-	std::vector<Mesh> loadModel();
+	void loadModel(std::vector<Mesh>* place_meshes_here);
 
 private:
 	const char* path;
-	void processNode(aiNode * node, const aiScene * scene);
-	void processMesh(const aiMesh * mesh, const aiScene * scene);
+	void processNode(aiNode * node, const aiScene * scene, std::vector<Mesh>* place_here);
+	void processMesh(const aiMesh * mesh, const aiScene * scene, std::vector<Mesh>* place_here);
 	std::vector<Mesh> m_Meshes;
+
 };
 

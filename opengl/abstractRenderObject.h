@@ -16,7 +16,8 @@ public:
 	abstractRenderObject(abstractShader * shader, const char* modelPath) : m_Shader(shader), path(modelPath)
 	{
 		modelParser parser(path);
-		m_Meshes = parser.loadModel();
+		parser.loadModel(&m_Meshes);
+		m_Model = glm::mat4(1.0f);
 	}
 
 	virtual void renderMeshes() const

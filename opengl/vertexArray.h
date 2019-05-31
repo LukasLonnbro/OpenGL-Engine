@@ -3,19 +3,19 @@
 #include "vertexBuffer.h"
 #include "bufferLayout.h"
 
-class vertexArray
+class VertexArray
 {
 public:
-	vertexArray();
-	~vertexArray();
+	VertexArray();
+	VertexArray(const VertexArray &other);
+	~VertexArray();
 
 	void bind() const;
-	void addBuffer(const vertexBuffer& vb, const bufferLayout& layout);
+	void addBuffer(const VertexBuffer& vb, const BufferLayout& layout);
 
-	inline const unsigned int getID() { return vao; };
+	inline const unsigned int getID() const { return vao; };
 
 private:
 	GLuint vao;
-	std::vector<vertexBuffer> vbs;
 };
 
