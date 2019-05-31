@@ -55,25 +55,29 @@ void renderer::sortByRenderObject(const std::vector<abstractEntity> *entities)
 
 void renderer::render()
 {
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	glClearColor(0.4, 0.3, 0.2, 1.0f);
 	glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
 
 	m_Camera.update();
 
+	glm::vec3 viewDir = (*m_Camera.getDir());
+	glm::vec3 viewPos = (*m_Camera.getPos());
+
 	glm::mat4 viewMat = (*m_Camera.getViewMatrix());
 	glm::mat4 projMat = (*m_Camera.getProjectionMatrix());
-	glm::mat4 modelMat = glm::mat4(1.0f);
 
 	for (unsigned int i = 0; i < sortedEntities.size(); i++) {
 		//std::cout << "New shaders binds.\n";
 
-		//Unnecessary copy
-		const abstractRenderObject * renderObject = sortedEntities[i][0]->getRenderObject();
-		const abstractShader * shader = renderObject->getShader();
+		const abstractRenderObject* renderObject = sortedEntities[i][0]->getRenderObject();
+		const abstractShader* shader = renderObject->getShader();
 		
 		shader->use();
 		shader->setMat4("view", glm::value_ptr(viewMat));
 		shader->setMat4("projection", glm::value_ptr(projMat));
+
+		shader->setFloat3f("aViewDir", glm::value_ptr(viewDir));
+		shader->setFloat3f("aViewPos", glm::value_ptr(viewPos));
 
 		int size = sortedEntities[i].size();
 		for (int j = 0; j < size; j++) {

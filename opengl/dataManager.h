@@ -1,4 +1,4 @@
-#pragma once
+ #pragma once
 #include "abstractShader.h"
 #include "abstractRenderObject.h"
 #include "abstractEntity.h"
@@ -22,7 +22,7 @@ public:
 	const inline std::vector<abstractEntity> * getEntities() const { return &entities; }
 
 	void loadMap();
-	void loadEntities();
+	std::vector<abstractEntity>* loadEntities();
 
 private:
 	//Needs to be heap allocated, make sure to delete in destructor. Currently memory leak.

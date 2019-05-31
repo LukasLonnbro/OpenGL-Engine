@@ -35,7 +35,3 @@ private:
 	static std::string shaders;
 	static std::string models;
 };
-
-std::string paths::dependencies = dependencyPath() + "\\deps\\";
-std::string paths::shaders		= dependencies + "shaders\\";
-std::string paths::models		= dependencies + "models\\";

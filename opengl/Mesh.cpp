@@ -1,37 +1,45 @@
 #include "Mesh.h"
 #include "elementBuffer.h"
+#include "bufferLayout.h"
 
 #include <iostream>
 
 #include <gl/glew.h>
 
-Mesh::Mesh(const std::vector<vertexData>& vertices, const std::vector<unsigned int>& indices) :
-	m_Vertices(vertices),
-	m_Indices(indices),
-	va(),
-	vb(&vertices[0], vertices.size() * sizeof(vertexData)),
-	eb(&indices[0], indices.size() * sizeof(unsigned int))
+// If buffers need to be uploaded again, local copy of data might be needed here.
+Mesh::Mesh(const std::vector<vertexData>& vertices, const std::vector<unsigned int>& indices)
 {
-	setupMesh();
+	va = new VertexArray();
+	vb = new VertexBuffer(&vertices[0], vertices.size() * sizeof(vertexData));
+	eb = new ElementBuffer(&indices[0], indices.size() * sizeof(unsigned int), indices.size());
+	setup();
 }
-Mesh::Mesh(const Mesh& other) : Mesh(other.getVertices(), other.getIndices())
+Mesh::Mesh(const Mesh& other)
 {
+	va = other.getVa();
+	eb = other.getEb();
+	vb = other.getVb();
+}
+Mesh::~Mesh()
+{
+
 }
 
 
-void Mesh::setupMesh() 
+void Mesh::setup()
 {
-	va.bind();
-
-	bufferLayout bl;
+	va->bind();
+	
+	BufferLayout bl;
 	bl.push<float>(3, true);
 	bl.push<float>(3, true);
 
-	va.addBuffer(vb, bl);
+	va->addBuffer((*vb), bl);
 }
 
 void Mesh::draw() const
 {
-	va.bind();
-	glDrawElements(GL_TRIANGLES, m_Indices.size(), GL_UNSIGNED_INT, 0);
+	va->bind();
+	eb->bind();
+	glDrawElements(GL_TRIANGLES, eb->getCount(), GL_UNSIGNED_INT, 0);
 }

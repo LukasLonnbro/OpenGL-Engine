@@ -18,26 +18,20 @@ class Mesh
 public:
 	Mesh(const std::vector<vertexData>& vertices, const std::vector<unsigned int>& indices);
 	Mesh(const Mesh& other);
-	Mesh& operator = (const Mesh &other)
-	{
-		m_Vertices = other.getVertices(); 
-		m_Indices = other.getIndices(); 
-		setupMesh();
-	}
-	~Mesh() { std::cout << "Deleting Mesh.\n"; }
+	~Mesh();
 
 	void draw() const;
 
-	const inline std::vector<vertexData> getVertices() const { return m_Vertices; };
-	const inline std::vector<unsigned int> getIndices() const { return m_Indices; };
+	VertexArray* getVa() const { return va; }
+	VertexBuffer* getVb() const { return vb; }
+	ElementBuffer* getEb() const { return eb; }
 
 private:
-	std::vector<vertexData> m_Vertices;
-	std::vector<unsigned int> m_Indices;
+	void setup();
 
-	vertexArray va;
-	vertexBuffer vb;
-	elementBuffer eb;
 
-	void setupMesh();
+	VertexArray* va;
+	VertexBuffer* vb;
+	ElementBuffer* eb;
+	BufferLayout bl;
 };

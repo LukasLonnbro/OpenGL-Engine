@@ -4,10 +4,12 @@
 #include "testRenderObject.h"
 #include "player.h"
 
+#include "paths.h"
+
 #include <glm/glm.hpp>
 
 /* 
-	Thought is: have a predefined amount of storage set aside for things to always have in memory.
+	Thought: Predefined amount of storage set aside for things to always have in memory.
 	Everything else is dynamically loaded as a linked list* with priority queues:
 	
 	*There is a lot of data to copy so vectors should be slower.
@@ -35,23 +37,26 @@ dataManager::~dataManager()
 		delete v;
 }
 
-void dataManager::loadMap(/*MAP map = null*/)
-{
-}
-
 // TODO :
 // Automate creation based on text file.
 // Add static allocation based on entity preference.
-void dataManager::loadEntities()
+std::vector<abstractEntity>* dataManager::loadEntities()
 {
-	basicShader * shader = new basicShader;
+	//Probably doesn't have to be heap allocated. 
+	basicShader* shader = new basicShader;
 	shaderPrograms.push_back(shader);
 	
-	testRenderObject * m_TestRenderObject = new testRenderObject(shaderPrograms[0],
-		"C:\\Users\\Lukas\\source\\repos\\LukasLonnbro\\OpenGL-Engine\\deps\\models\\teapot.obj");
+	testRenderObject* m_TestRenderObject = new testRenderObject(shaderPrograms[0],
+		(paths::getModelPath() + "block.obj").c_str());
 
 	player m_Player(glm::vec3(0.0f), m_TestRenderObject);
 
 	dynamicRenderData.push_back(m_TestRenderObject);
 	entities.push_back(m_Player);
+
+	return &entities;
+}
+
+void dataManager::loadMap(/*MAP map = null*/)
+{
 }

@@ -131,6 +131,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Block.cpp" />
     <ClCompile Include="bufferLayout.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="dataManager.cpp" />
@@ -139,6 +140,7 @@
     <ClCompile Include="errorhandler.cpp" />
     <ClCompile Include="eventHandler.cpp" />
     <ClCompile Include="gameController.cpp" />
+    <ClCompile Include="Paths.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="renderer.cpp" />
     <ClCompile Include="setupHandler.cpp" />
@@ -152,6 +154,7 @@
   <ItemGroup>
     <ClInclude Include="abstractRenderObject.h" />
     <ClInclude Include="basicShader.h" />
+    <ClInclude Include="Block.h" />
     <ClInclude Include="bufferLayout.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="dataManager.h" />

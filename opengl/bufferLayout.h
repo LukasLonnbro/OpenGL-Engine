@@ -11,11 +11,11 @@ struct vertexBufferElement
 };
 
 //Add template to allow pushing of different types of values.
-class bufferLayout
+class BufferLayout
 {
 public:
-	bufferLayout();
-	~bufferLayout();
+	BufferLayout();
+	~BufferLayout();
 
 	template<typename T>
 	void push(int count, bool normalized) 
@@ -27,22 +27,22 @@ public:
 	void push<float>(int count, bool normalized)
 	{
 		elements.push_back({ count, GL_FLOAT, normalized });
-		stride += getTypeSize(GL_FLOAT);
+		stride += getTypeSize(GL_FLOAT, count);
 	}
 
 	template <>
 	void push<unsigned char>(int count, bool normalized)
 	{
 		elements.push_back({ count, GL_UNSIGNED_BYTE, normalized });
-		stride += getTypeSize(GL_UNSIGNED_BYTE);
+		stride += getTypeSize(GL_UNSIGNED_BYTE, count);
 	}
 
-	int getTypeSize(unsigned int type) const
+	int getTypeSize(unsigned int type, unsigned int count) const
 	{
 		switch (type)
 		{
-		case GL_FLOAT:				return sizeof(GLfloat); break;
-		case GL_UNSIGNED_BYTE:		return sizeof(GLubyte); break;
+		case GL_FLOAT:				return (sizeof(float) * count); break;
+		case GL_UNSIGNED_BYTE:		return (sizeof(char) * count); break;
 		}
 	}
 

@@ -3,7 +3,7 @@
 #include <Shlwapi.h>
 #include <string>
 
-static struct info 
+struct info 
 {
 	static inline float WIDTH() { return 640; };
 	static inline float HEIGHT() { return 480; };

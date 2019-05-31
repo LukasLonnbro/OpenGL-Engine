@@ -54,20 +54,12 @@ void gameController::run()
 	dataManager data;
 	data.loadEntities();
 
-	const std::vector<abstractEntity> entities = *data.getEntities();
-	//m_Renderer.prep(entities);
-	
-	abstractRenderObject x = *entities[0].getRenderObject();
-	x.coutsomethingrandom();
-	std::cout << x.getShader();
-	
-	int a;
-	std::cin >> a;
+	m_Renderer.prep(data.getEntities());
 
 	while (true) {
 		eventHandler::update();
 
-		//m_Renderer.render();
+		m_Renderer.render();
 
 		int curTick = SDL_GetTicks();
 		if (curTick - frameTick >= 1000) {
