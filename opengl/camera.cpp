@@ -9,12 +9,13 @@
 
 #include <iostream>
 
-camera::camera() : 
-	viewMatrix(glm::mat4(1.0f)), 
-	projectionMatrix(glm::mat4(1.0f)), 
-	sensitivity(0.5f)
+camera::camera() :
+	viewMatrix(glm::mat4(1.0f)),
+	projectionMatrix(glm::mat4(1.0f)),
+	sensitivity(0.5f),
+	distance(20.0f)
 {
-	pos = glm::vec3(0.0f, 0.0f, 0.0f);
+	pos = glm::vec3(2.0f, 2.0f, 2.0f);
 	front = glm::vec3(0.0f, 0.0f, 1.0f);
 	up = glm::vec3(0.0f, 1.0f, 0.0f);
 
@@ -57,11 +58,28 @@ void camera::moveByKeyboard()
 	{
 		pos.y -= 0.1f;
 	}
-	if (evt->q)
-	{
-		pos = glm::vec3(0.0f, 0.0f, 0.0f);
-		front = glm::vec3(0.0f, 0.0f, 1.0f);
+}
+
+void camera::rotateByKeyboard()
+{
+	if (evt->q){
+		directionX -= 1.0f * sensitivity;
+	} if (evt->e){
+		directionX += 1.0f * sensitivity;
 	}
+	if (evt->f) {
+		directionY -= 1.0f * sensitivity;
+	} if (evt->r) {
+		directionY += 1.0f * sensitivity;
+	}
+
+	float angleX = glm::radians(directionX);
+	float angleY = glm::radians(directionY);
+
+	front.x = cos(angleY) * cos(angleX);
+	front.y = sin(angleY);
+	front.z = cos(angleY) * sin(angleX);
+	front = glm::normalize(front);
 }
 
 void camera::rotateByMouse()
@@ -93,16 +111,18 @@ void camera::rotateByMouse()
 
 void camera::update()
 {
-	rotateByMouse();
+	//rotateByMouse();
+	rotateByKeyboard();
 	moveByKeyboard();
 
-	if (evt->q)
+	if (evt->x)
 	{
-		pos = glm::vec3(0.0f, 0.0f, 0.0f);
+		pos = glm::vec3(5.0f, 5.0f, 5.0f);
 		front = glm::vec3(0.0f, 0.0f, 1.0f);
 		directionY = 0;
 		directionX = 0;
 	}
+
 
 	viewMatrix = glm::lookAt(pos, pos + front, up);
 	projectionMatrix = glm::perspective(
@@ -114,4 +134,19 @@ void camera::update()
 
 	//std::cout << "position: " << pos.x << " | " << pos.y << " | " << pos.z << " | \n";
 	//std::cout << "front: " << front.x << " | " << front.y << " | " << front.z << " | \n";
+}
+
+void camera::update_FIXED_CENTER() {
+	if (evt->w) { distance += 0.1f; }
+	if (evt->s) { distance -= 0.1f; }
+	if (evt->a) { directionX -= 0.01f; }
+	if (evt->d) { directionX += 0.01f; }
+	if (evt->space) { pos.y += 0.1f; }
+	if (evt->shift) { pos.y -= 0.1f; }
+
+	pos.x = sin(directionX) * distance;
+	pos.z = cos(directionX) * distance;
+
+	glm::vec3 center = glm::vec3(0.0f, 0.0f, 0.0f);
+	viewMatrix = glm::lookAt(pos, center, up);
 }

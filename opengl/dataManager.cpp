@@ -3,6 +3,8 @@
 #include "basicShader.h"
 #include "testRenderObject.h"
 #include "player.h"
+#include "simpleLightRender.h"
+#include "simpleLightEntity.h"
 
 #include "paths.h"
 
@@ -46,13 +48,25 @@ std::vector<abstractEntity>* dataManager::loadEntities()
 	basicShader* shader = new basicShader;
 	shaderPrograms.push_back(shader);
 	
-	testRenderObject* m_TestRenderObject = new testRenderObject(shaderPrograms[0],
+	testRenderObject* m_TeapotRenderOBject = new testRenderObject(shaderPrograms[0],
 		(paths::getModelPath() + "teapot.obj").c_str());
+	player m_Player(glm::vec3(0.0f), m_TeapotRenderOBject);
 
-	player m_Player(glm::vec3(0.0f), m_TestRenderObject);
+	simpleLightRender* m_CubeRenderObject = new simpleLightRender(
+		shaderPrograms[0],
+		(paths::getModelPath() + "cube.obj").c_str(),
+		glm::vec3(0.1f, 0.1f, 0.1f),
+		glm::vec3(0.5f, 0.0f, 0.5f),
+		glm::vec3(1.0f, 1.0f, 1.0f)
+	);
+	simpleLightEntity light(glm::vec3(4.0f, 4.0f, 4.0f), m_CubeRenderObject);
 
-	dynamicRenderData.push_back(m_TestRenderObject);
+	dynamicRenderData.push_back(m_TeapotRenderOBject);
+	dynamicRenderData.push_back(m_CubeRenderObject);
+
 	entities.push_back(m_Player);
+	entities.push_back(light);
+	lights.push_back(light);
 
 	return &entities;
 }

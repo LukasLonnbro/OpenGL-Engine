@@ -131,7 +131,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Block.cpp" />
     <ClCompile Include="bufferLayout.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="dataManager.cpp" />
@@ -152,11 +151,13 @@
     <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="abstractLightEntity.h" />
+    <ClInclude Include="abstractLightRender.h" />
     <ClInclude Include="abstractRenderObject.h" />
     <ClInclude Include="basicShader.h" />
-    <ClInclude Include="Block.h" />
     <ClInclude Include="bufferLayout.h" />
     <ClInclude Include="camera.h" />
+    <ClInclude Include="simpleLightEntity.h" />
     <ClInclude Include="dataManager.h" />
     <ClInclude Include="elementBuffer.h" />
     <ClInclude Include="instancedRenderObject.h" />
@@ -172,6 +173,7 @@
     <ClInclude Include="renderer.h" />
     <ClInclude Include="setupHandler.h" />
     <ClInclude Include="abstractShader.h" />
+    <ClInclude Include="simpleLightRender.h" />
     <ClInclude Include="testRenderObject.h" />
     <ClInclude Include="type.h" />
     <ClInclude Include="vertexArray.h" />

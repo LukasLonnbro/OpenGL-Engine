@@ -10,18 +10,10 @@
 #include <gl/glew.h>
 #include <glm/gtc/matrix_transform.hpp>
 
-player::player(glm::vec3 position, testRenderObject * tRO) : abstractEntity(tRO) 
+player::player(glm::vec3 position, testRenderObject * tRO) : abstractEntity(position, tRO) 
 {
-	m_Type = type::ACTIVE;
-	pos = position;
-	modelMatrix = glm::translate(glm::mat4(1.0f), pos);
 }
 
 player::~player()
 {
-}
-
-void player::update()
-{
-	m_renderData->setModelMat(modelMatrix);
 }

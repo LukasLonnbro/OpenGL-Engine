@@ -9,10 +9,11 @@ public:
 	~camera();
 
 	void update();
+	void update_FIXED_CENTER();
 
 	//change to glm::value_ptr
-	const glm::mat4 * getViewMatrix() const { return &viewMatrix; };
-	const glm::mat4 * getProjectionMatrix() const { return &projectionMatrix; };
+	const glm::mat4* getViewMatrix() const { return &viewMatrix; };
+	const glm::mat4* getProjectionMatrix() const { return &projectionMatrix; };
 	
 	const glm::vec3* getPos() const { return &pos; }
 	const glm::vec3* getDir() const { return &front; }
@@ -27,10 +28,13 @@ private:
 
 	void moveByKeyboard();
 	void rotateByMouse();
+	void rotateByKeyboard();
 
 	float directionX;
 	float directionY;
 
 	float sensitivity;
+
+	float distance;
 };
 

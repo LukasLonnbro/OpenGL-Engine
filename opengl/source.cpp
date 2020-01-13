@@ -149,5 +149,4 @@ int main() {
 	controller.run();
 
 	//render3(myWindow);
-
 }

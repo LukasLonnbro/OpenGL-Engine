@@ -1,29 +1,58 @@
 #version 330
+in vec3 fragPos;
+in vec3 Normal;
+
+struct Material {
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular;
+    float shininess;
+};
+struct Light {
+    vec3 position;
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular;
+};
+
+uniform vec3 viewPos;
+uniform Material material;
+uniform Light[10] lights;
+uniform int activeLights;
+
 out vec4 FragColor;
 
-in vec3 FragPos;
-in vec3 viewPos;
-in vec3 normal;
+float calcDiff(vec3 norm, vec3 lightDir)
+{
+    return max(dot(norm, lightDir), 0.0f);
+}
+float calcSpec(vec3 norm, vec3 lightDir)
+{
+    vec3 viewDir = normalize(viewPos - fragPos);
+    vec3 reflectDir = reflect(-lightDir, norm);
+    return pow(max(dot(viewDir, reflectDir), 0.0), material.shininess);
+}
 
 void main()
 {
-    float shininess = 0.5;
-    vec3 lightPos = vec3(1.0f, 1.0f, 1.0f);
-    bool blinn = true;
+    vec3 ambience;
+    vec3 diffuse;
+    vec3 specular;
 
-    vec3 objectColor = vec3(1.0f, 0.3, 1.0f);
-    vec3 lightColor = vec3(1.0f, 1.0f, 1.0f);
+    vec3 result;
+    for(int i = 0; i < activeLights; i++) {
+        vec3 norm = normalize(Normal);
+        vec3 lightDir = normalize(lights[i].position - fragPos);
 
-    float ambientStrength = 0.1;
-    vec3 ambient = ambientStrength * lightColor;
+        float diff = calcDiff(norm, lightDir);
+        float spec = calcSpec(norm, lightDir);
 
-    vec3 lightDir   = normalize(lightPos - FragPos);
-    vec3 viewDir    = normalize(viewPos - FragPos);
-    vec3 halfwayDir = normalize(lightDir + viewDir);
+        ambience = lights[i].ambient  *  material.ambient;
+        diffuse  = lights[i].diffuse  * (material.diffuse * diff);
+        specular = lights[i].specular * (material.specular * specular);
 
-    float spec = pow(max(dot(normal, halfwayDir), 0.0), shininess);
-    vec3 specular = lightColor * spec;
+        result += diffuse + specular;
+    }
 
-    vec3 result = ambient * specular * objectColor;
     FragColor = vec4(result, 1.0f);
 }

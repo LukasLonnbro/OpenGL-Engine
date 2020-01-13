@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
 #include <gl/glew.h>
 #include <SDL.h>
@@ -54,24 +55,31 @@ void gameController::run()
 	dataManager data;
 	data.loadEntities();
 
+	//Can be rewritten to more easily read code. 
+	m_Renderer.setLights(data.getLights());
 	m_Renderer.prep(data.getEntities());
 
+	int GAMETICKS = 0;
+	int curTick = 0;
 	while (true) {
-		eventHandler::update();
+		curTick = SDL_GetTicks();
+		if (curTick - lastTick >= (1000 / 144)) { //update 144 times per second
+			lastTick = curTick;
+			GAMETICKS++;
 
-		m_Renderer.render();
+			eventHandler::update();
 
-		int curTick = SDL_GetTicks();
-		if (curTick - frameTick >= 1000) {
-			std::cout << "FPS: " << frames << std::endl;
-			frames = 0;
+			// Entity updating 
 
-			frameTick = curTick;
+			m_Renderer.render();
+
+			if (GAMETICKS % 144 == 0) {
+				system("cls");
+				std::cout << "FPS: " << frames << std::endl;
+				frames = 0;
+			}
+			frames++;
+			SDL_GL_SwapWindow(m_Window->getWindowHolder());
 		}
-		frames++;
-
-		lastTick = curTick;
-
-		SDL_GL_SwapWindow(m_Window->getWindowHolder());
 	}
 }

@@ -17,13 +17,9 @@ void modelParser::loadModel(std::vector<Mesh>* place_here)
 	const aiScene *scene = importer.ReadFile(
 		path,
 		aiProcess_Triangulate |
-		aiProcess_FlipWindingOrder |
 		aiProcess_FlipUVs |
-		aiProcess_JoinIdenticalVertices |
-		aiProcess_FindInvalidData |
-		aiProcess_FindDegenerates |
-		aiProcess_MakeLeftHanded |
-		aiProcess_ValidateDataStructure
+		aiProcess_JoinIdenticalVertices | 
+		aiProcess_GenNormals 
 	);
 
 	if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode)
@@ -63,10 +59,12 @@ void modelParser::processMesh(const aiMesh * inMesh, const aiScene * scene, std:
 		vertex.position = vector;
 
 		if (inMesh->HasNormals()) {
-			vector.x = inMesh->mNormals[i].x;
-			vector.y = inMesh->mNormals[i].y;
-			vector.z = inMesh->mNormals[i].z;
-			vertex.normal = vector;
+			glm::vec3 normals;
+			normals.x = inMesh->mNormals[i].x;
+			normals.y = inMesh->mNormals[i].y;
+			normals.z = inMesh->mNormals[i].z;
+			vertex.normal = normals;
+			//std::cout << " x: " << vertex.normal.x << " y: " << vertex.normal.y << " z: " << vertex.normal.z << "\n";
 		}
 
 		vertices.push_back(vertex);

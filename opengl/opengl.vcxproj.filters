@@ -18,21 +18,6 @@
     <Filter Include="game">
       <UniqueIdentifier>{9a4f14b3-257e-47de-9899-9517bc170bfc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="game\entity">
-      <UniqueIdentifier>{04414a9d-99f2-42d2-93fa-1854b17fae8c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="game\entity\entities">
-      <UniqueIdentifier>{5887ce62-5bba-4562-8bfe-01558826f824}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="game\entity\updater">
-      <UniqueIdentifier>{625d592b-6d60-4d40-bb84-377992d60c9c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="game\entity\updater\src">
-      <UniqueIdentifier>{ea97f89f-69db-487a-abf3-8a647af63558}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="game\entity\updater\updaters">
-      <UniqueIdentifier>{eb32367b-f01c-4b51-a366-ea17fe64cdc7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="game\renderer">
       <UniqueIdentifier>{84242af3-af1a-4ca4-88ac-eb8ce07a509f}</UniqueIdentifier>
     </Filter>
@@ -45,9 +30,6 @@
     <Filter Include="game\renderer\RenderObjects\abstract">
       <UniqueIdentifier>{1b5fd7be-e42b-4d06-baf8-0fb86cdee0cb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="game\entity\entities\base">
-      <UniqueIdentifier>{a7e8f1bf-8e62-4f2e-b0a5-12a188d83e8c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="game\renderer\shaders">
       <UniqueIdentifier>{5f332ebd-8302-4355-9497-3dc728b14237}</UniqueIdentifier>
     </Filter>
@@ -56,6 +38,27 @@
     </Filter>
     <Filter Include="game\renderer\glBufferSetups">
       <UniqueIdentifier>{aef1fd91-8547-4125-bbc8-040aa4163943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\gamelogic">
+      <UniqueIdentifier>{04414a9d-99f2-42d2-93fa-1854b17fae8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\gamelogic\entities">
+      <UniqueIdentifier>{5887ce62-5bba-4562-8bfe-01558826f824}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\gamelogic\updater">
+      <UniqueIdentifier>{625d592b-6d60-4d40-bb84-377992d60c9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\gamelogic\updater\src">
+      <UniqueIdentifier>{ea97f89f-69db-487a-abf3-8a647af63558}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\gamelogic\updater\updaters">
+      <UniqueIdentifier>{eb32367b-f01c-4b51-a366-ea17fe64cdc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\renderer\RenderObjects\lights">
+      <UniqueIdentifier>{a043892f-96f0-42f0-b64d-824dfaace105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\gamelogic\entities\abstracts">
+      <UniqueIdentifier>{a7e8f1bf-8e62-4f2e-b0a5-12a188d83e8c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -68,11 +71,8 @@
     <ClCompile Include="setupHandler.cpp">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="gameController.cpp">
-      <Filter>game</Filter>
-    </ClCompile>
     <ClCompile Include="player.cpp">
-      <Filter>game\entity\entities</Filter>
+      <Filter>game\gamelogic\entities</Filter>
     </ClCompile>
     <ClCompile Include="source.cpp">
       <Filter>source</Filter>
@@ -110,11 +110,11 @@
     <ClCompile Include="camera.cpp">
       <Filter>game\renderer</Filter>
     </ClCompile>
-    <ClCompile Include="Block.cpp">
-      <Filter>game\entity</Filter>
-    </ClCompile>
     <ClCompile Include="Paths.cpp">
       <Filter>other</Filter>
+    </ClCompile>
+    <ClCompile Include="gameController.cpp">
+      <Filter>game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -131,7 +131,7 @@
       <Filter>game</Filter>
     </ClInclude>
     <ClInclude Include="player.h">
-      <Filter>game\entity\entities</Filter>
+      <Filter>game\gamelogic\entities</Filter>
     </ClInclude>
     <ClInclude Include="renderer.h">
       <Filter>game\renderer</Filter>
@@ -158,13 +158,13 @@
       <Filter>game\renderer\RenderObjects\abstract</Filter>
     </ClInclude>
     <ClInclude Include="abstractEntity.h">
-      <Filter>game\entity\entities\base</Filter>
+      <Filter>game\gamelogic\entities\abstracts</Filter>
     </ClInclude>
     <ClInclude Include="basicShader.h">
       <Filter>game\renderer\shaders</Filter>
     </ClInclude>
     <ClInclude Include="type.h">
-      <Filter>game\entity</Filter>
+      <Filter>game\gamelogic</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
       <Filter>game\renderer\dataParser</Filter>
@@ -190,8 +190,17 @@
     <ClInclude Include="instancedRenderObject.h">
       <Filter>game\renderer\RenderObjects</Filter>
     </ClInclude>
-    <ClInclude Include="Block.h">
-      <Filter>game\entity</Filter>
+    <ClInclude Include="simpleLightEntity.h">
+      <Filter>game\gamelogic\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="simpleLightRender.h">
+      <Filter>game\renderer\RenderObjects\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="abstractLightRender.h">
+      <Filter>game\renderer\RenderObjects\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="abstractLightEntity.h">
+      <Filter>game\gamelogic\entities\abstracts</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

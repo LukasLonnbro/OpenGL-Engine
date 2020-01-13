@@ -9,6 +9,11 @@
 // If buffers need to be uploaded again, local copy of data might be needed here.
 Mesh::Mesh(const std::vector<vertexData>& vertices, const std::vector<unsigned int>& indices)
 {
+	/*for (int i = 0; i < vertices.size(); i++) {
+		std::cout << "i: " << i << "\nx : " << vertices[i].normal.x << " y: " << vertices[i].normal.y << " z: " << vertices[i].normal.z << "\n";
+	}*/
+	
+	
 	va = new VertexArray();
 	vb = new VertexBuffer(&vertices[0], vertices.size() * sizeof(vertexData));
 	eb = new ElementBuffer(&indices[0], indices.size() * sizeof(unsigned int), indices.size());

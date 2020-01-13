@@ -51,4 +51,6 @@ void setupHandler::setupGL()
 	}
 
 	glFrontFace(GL_CCW);
+	glEnable(GL_DEPTH_TEST);
+	glDepthMask(GL_LESS);
 }

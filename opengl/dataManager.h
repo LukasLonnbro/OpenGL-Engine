@@ -2,10 +2,13 @@
 #include "abstractShader.h"
 #include "abstractRenderObject.h"
 #include "abstractEntity.h"
+#include "abstractLightEntity.h"
 
 #include <vector>
 #include <list>
 
+
+//Rewrite too static member variables set on initiation for readability?
 #ifndef STATIC_ALLOC
 	#define STATIC_ALLOC			false
 #endif
@@ -19,16 +22,20 @@ public:
 	dataManager();
 	~dataManager();
 
-	const inline std::vector<abstractEntity> * getEntities() const { return &entities; }
+	inline const std::vector<abstractEntity>* getEntities() const { return &entities; }
+	inline const std::vector<abstractLightEntity>* getLights() const { return &lights; }
 
 	void loadMap();
 	std::vector<abstractEntity>* loadEntities();
+
 
 private:
 	//Needs to be heap allocated, make sure to delete in destructor. Currently memory leak.
 	abstractRenderObject * staticRenderData[STATIC_ALLOC_MEMORY_SIZE];
 	std::list<abstractRenderObject *> dynamicRenderData;
+
 	std::vector<abstractEntity> entities;
+	std::vector<abstractLightEntity> lights;
 
 	unsigned int priorityIndex;
 	unsigned int staticAllocIndex;

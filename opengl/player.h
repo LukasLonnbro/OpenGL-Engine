@@ -10,17 +10,5 @@ class player : public abstractEntity
 public:
 	player(glm::vec3 position, testRenderObject * tRO);
 	~player();
-
-	void update();
-	void attachCamera(camera cameraToAttach) { m_Camera = cameraToAttach; attached = true; };
-
-private:
-	// TODO? : replace with cameraObject
-	camera m_Camera;
-	bool attached;
-
-	testRenderObject * m_renderData;
-
-	//TODO? : add eventObject.
 };
 

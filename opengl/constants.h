@@ -15,11 +15,15 @@ struct info
 
 struct eventBools
 {
-	bool w;
-	bool s;
 	bool a;
 	bool d;
+	bool e;
+	bool f;
 	bool q;
+	bool r;
+	bool s;
+	bool w;
+	bool x;
 
 	bool shift;
 	bool space;

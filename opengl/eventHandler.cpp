@@ -26,53 +26,33 @@ void eventHandler::update()
 		case SDL_KEYDOWN:
 			switch (evnt.key.keysym.sym)
 			{
-			case SDLK_w:
-				events.w = true;
-				break;
-			case SDLK_s:
-				events.s = true;
-				break;
-			case SDLK_a:
-				events.a = true;
-				break;
-			case SDLK_d:
-				events.d = true;
-				break;
-			case SDLK_q:
-				events.q = true;
-				break;
-			case SDLK_SPACE:
-				events.space = true;
-				break;
-			case SDLK_LSHIFT:
-				events.shift = true;
-				break;
+			case SDLK_a: events.a = true; break;
+			case SDLK_d: events.d = true; break;
+			case SDLK_e: events.e = true; break;
+			case SDLK_f: events.f = true; break; 
+			case SDLK_q: events.q = true; break;
+			case SDLK_r: events.r = true; break;
+			case SDLK_s: events.s = true; break;
+			case SDLK_w: events.w = true; break;
+			case SDLK_x: events.x = true; break;
+			case SDLK_SPACE: events.space = true; break;
+			case SDLK_LSHIFT: events.shift = true; break;
 			}
 			break;
 		case SDL_KEYUP:
 			switch (evnt.key.keysym.sym)
 			{
-			case SDLK_w:
-				events.w = false;
-				break;
-			case SDLK_s:
-				events.s = false;
-				break;
-			case SDLK_a:
-				events.a = false;
-				break;
-			case SDLK_d:
-				events.d = false;
-				break;
-			case SDLK_q:
-				events.q = false;
-				break;
-			case SDLK_SPACE:
-				events.space = false;
-				break;
-			case SDLK_LSHIFT:
-				events.shift = false;
-				break;
+			case SDLK_a: events.a = false; break;
+			case SDLK_d: events.d = false; break;
+			case SDLK_e: events.e = false; break;
+			case SDLK_f: events.f = false; break;
+			case SDLK_q: events.q = false; break;
+			case SDLK_r: events.r = false; break;
+			case SDLK_s: events.s = false; break;
+			case SDLK_w: events.w = false; break;
+			case SDLK_x: events.x = false; break;
+			case SDLK_SPACE: events.space = false; break;
+			case SDLK_LSHIFT: events.shift = false; break;
 			}
 			break;
 		}

@@ -166,11 +166,17 @@ void abstractShader::setFloat(const char * name, const float value) const {
 void abstractShader::setFloat3f(const char* name, const float value[]) const {
 	glUniform3f(glGetUniformLocation(shaderProgram, name), value[0], value[1], value[2]);
 }
+void abstractShader::setFloat3f(const char* name, float v1, float v2, float v3) const {
+	glUniform3f(glGetUniformLocation(shaderProgram, name), v1, v2, v3);
+}
 void abstractShader::setMat4(const char* name, const float* mat4) const {
 	glUniformMatrix4fv(glGetUniformLocation(shaderProgram, name), 1, GL_FALSE, mat4);
 }
 void abstractShader::setBool(const char* name, const unsigned char boolean) const {
 	glUniform1i(glGetUniformLocation(shaderProgram, name), boolean);
+}
+void abstractShader::setInt(const char* name, unsigned int val) const {
+	glUniform1i(glGetUniformLocation(shaderProgram, name), val);
 }
 
 void abstractShader::use() const
