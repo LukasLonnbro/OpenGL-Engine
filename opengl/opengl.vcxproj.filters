@@ -15,192 +15,225 @@
     <Filter Include="other">
       <UniqueIdentifier>{76bed845-ea32-45e0-a23b-d6761540ded5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="game">
-      <UniqueIdentifier>{9a4f14b3-257e-47de-9899-9517bc170bfc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="game\renderer">
-      <UniqueIdentifier>{84242af3-af1a-4ca4-88ac-eb8ce07a509f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="game\renderer\RenderObjects">
-      <UniqueIdentifier>{9218d5a1-152f-467f-b41f-2c1b74a24e96}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="game\renderer\dataParser">
-      <UniqueIdentifier>{28347bf3-9615-4ec4-bce3-723dff53fdc3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="game\renderer\RenderObjects\abstract">
-      <UniqueIdentifier>{1b5fd7be-e42b-4d06-baf8-0fb86cdee0cb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="game\renderer\shaders">
-      <UniqueIdentifier>{5f332ebd-8302-4355-9497-3dc728b14237}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="game\renderer\shaders\abstract">
-      <UniqueIdentifier>{d05dcecb-3f17-40d1-913e-007b82a3d0c5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="game\renderer\glBufferSetups">
-      <UniqueIdentifier>{aef1fd91-8547-4125-bbc8-040aa4163943}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="game\gamelogic">
+    <Filter Include="Gameplay foundation">
       <UniqueIdentifier>{04414a9d-99f2-42d2-93fa-1854b17fae8c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="game\gamelogic\entities">
+    <Filter Include="Gameplay foundation\entities">
       <UniqueIdentifier>{5887ce62-5bba-4562-8bfe-01558826f824}</UniqueIdentifier>
     </Filter>
-    <Filter Include="game\gamelogic\updater">
-      <UniqueIdentifier>{625d592b-6d60-4d40-bb84-377992d60c9c}</UniqueIdentifier>
+    <Filter Include="Gameplay foundation\entities\abstracts">
+      <UniqueIdentifier>{a7e8f1bf-8e62-4f2e-b0a5-12a188d83e8c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="game\gamelogic\updater\src">
-      <UniqueIdentifier>{ea97f89f-69db-487a-abf3-8a647af63558}</UniqueIdentifier>
+    <Filter Include="Low level renderer">
+      <UniqueIdentifier>{84242af3-af1a-4ca4-88ac-eb8ce07a509f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="game\gamelogic\updater\updaters">
-      <UniqueIdentifier>{eb32367b-f01c-4b51-a366-ea17fe64cdc7}</UniqueIdentifier>
+    <Filter Include="Low level renderer\RenderObjects">
+      <UniqueIdentifier>{9218d5a1-152f-467f-b41f-2c1b74a24e96}</UniqueIdentifier>
     </Filter>
-    <Filter Include="game\renderer\RenderObjects\lights">
+    <Filter Include="Low level renderer\RenderObjects\abstract">
+      <UniqueIdentifier>{1b5fd7be-e42b-4d06-baf8-0fb86cdee0cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Low level renderer\RenderObjects\lights">
       <UniqueIdentifier>{a043892f-96f0-42f0-b64d-824dfaace105}</UniqueIdentifier>
     </Filter>
-    <Filter Include="game\gamelogic\entities\abstracts">
-      <UniqueIdentifier>{a7e8f1bf-8e62-4f2e-b0a5-12a188d83e8c}</UniqueIdentifier>
+    <Filter Include="Low level renderer\shaders">
+      <UniqueIdentifier>{5f332ebd-8302-4355-9497-3dc728b14237}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Low level renderer\shaders\abstract">
+      <UniqueIdentifier>{d05dcecb-3f17-40d1-913e-007b82a3d0c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform independence">
+      <UniqueIdentifier>{f6b20f36-6f7b-4584-99e3-b49156fe831b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform independence\Graphics Wrappers">
+      <UniqueIdentifier>{63f79864-ae78-47ae-aa39-d902cf74bab3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform independence\Graphics Wrappers\Buffer abstractions">
+      <UniqueIdentifier>{aef1fd91-8547-4125-bbc8-040aa4163943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform independence\Filesystem">
+      <UniqueIdentifier>{e8a1a405-9fe1-4cf1-8b28-61d4c5b1ad17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\Error handling">
+      <UniqueIdentifier>{1566739a-af01-4fec-a104-14e2d7249077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\User IO wrappers">
+      <UniqueIdentifier>{a42b509d-de38-48e6-bb11-b9f9c5d613ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\Memory Management">
+      <UniqueIdentifier>{a67949e0-07cc-4003-a625-509856c705c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\Custom Algorithms">
+      <UniqueIdentifier>{b3b72efa-d53d-4f6d-ae6a-70d7f5ab639b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\OS wrappers">
+      <UniqueIdentifier>{ed8dc0ca-dcfc-462a-88b9-766bd8ccb306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\Logs and debug">
+      <UniqueIdentifier>{fc86c94f-b9c8-439e-bb32-2003749c34d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\Module Startups">
+      <UniqueIdentifier>{0a6143e9-0287-4a91-bafb-38e3e7cab91e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{bb383918-b227-448a-b4f9-5b1d004004a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\3D Model Resources">
+      <UniqueIdentifier>{28347bf3-9615-4ec4-bce3-723dff53fdc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Textures">
+      <UniqueIdentifier>{cf25e47e-f76c-4de3-b4e1-da4a6164af4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Material">
+      <UniqueIdentifier>{7ee7aa00-2aa9-4a98-a59f-80d116c869c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay foundation\Gameflow">
+      <UniqueIdentifier>{4727eb9e-ac31-4ef9-a258-891133cf2b17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Low level renderer\Cameras">
+      <UniqueIdentifier>{e650f920-2c09-4022-924b-2249517b1426}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="window.cpp">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="errorhandler.cpp">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="setupHandler.cpp">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="player.cpp">
-      <Filter>game\gamelogic\entities</Filter>
+      <Filter>Gameplay foundation\entities</Filter>
     </ClCompile>
     <ClCompile Include="source.cpp">
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="renderer.cpp">
-      <Filter>game\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="eventHandler.cpp">
-      <Filter>core</Filter>
+      <Filter>Low level renderer</Filter>
     </ClCompile>
     <ClCompile Include="vertexArray.cpp">
-      <Filter>game\renderer\glBufferSetups</Filter>
+      <Filter>Platform independence\Graphics Wrappers\Buffer abstractions</Filter>
     </ClCompile>
     <ClCompile Include="vertexBuffer.cpp">
-      <Filter>game\renderer\glBufferSetups</Filter>
+      <Filter>Platform independence\Graphics Wrappers\Buffer abstractions</Filter>
     </ClCompile>
     <ClCompile Include="bufferLayout.cpp">
-      <Filter>game\renderer\glBufferSetups</Filter>
+      <Filter>Platform independence\Graphics Wrappers\Buffer abstractions</Filter>
     </ClCompile>
     <ClCompile Include="abstractShader.cpp">
-      <Filter>game\renderer\shaders\abstract</Filter>
-    </ClCompile>
-    <ClCompile Include="modelParser.cpp">
-      <Filter>game\renderer\dataParser</Filter>
+      <Filter>Low level renderer\shaders\abstract</Filter>
     </ClCompile>
     <ClCompile Include="Mesh.cpp">
-      <Filter>game\renderer\dataParser</Filter>
+      <Filter>Resources\3D Model Resources</Filter>
     </ClCompile>
     <ClCompile Include="elementBuffer.cpp">
-      <Filter>game\renderer\glBufferSetups</Filter>
+      <Filter>Platform independence\Graphics Wrappers\Buffer abstractions</Filter>
     </ClCompile>
-    <ClCompile Include="dataManager.cpp">
-      <Filter>game\renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="camera.cpp">
-      <Filter>game\renderer</Filter>
+    <ClCompile Include="resourceManager.cpp">
+      <Filter>Resources</Filter>
     </ClCompile>
     <ClCompile Include="Paths.cpp">
-      <Filter>other</Filter>
+      <Filter>Platform independence\Filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="errorhandler.cpp">
+      <Filter>core\Error handling</Filter>
+    </ClCompile>
+    <ClCompile Include="eventHandler.cpp">
+      <Filter>core\User IO wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="window.cpp">
+      <Filter>core\OS wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="setupHandler.cpp">
+      <Filter>core\Module Startups</Filter>
+    </ClCompile>
+    <ClCompile Include="modelParser.cpp">
+      <Filter>Resources</Filter>
     </ClCompile>
     <ClCompile Include="gameController.cpp">
-      <Filter>game</Filter>
+      <Filter>Gameplay foundation\Gameflow</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>Low level renderer\Cameras</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="window.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="errorhandler.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="setupHandler.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="gameController.h">
-      <Filter>game</Filter>
-    </ClInclude>
     <ClInclude Include="player.h">
-      <Filter>game\gamelogic\entities</Filter>
+      <Filter>Gameplay foundation\entities</Filter>
     </ClInclude>
     <ClInclude Include="renderer.h">
-      <Filter>game\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="camera.h">
-      <Filter>game\renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="eventHandler.h">
-      <Filter>core</Filter>
+      <Filter>Low level renderer</Filter>
     </ClInclude>
     <ClInclude Include="vertexArray.h">
-      <Filter>game\renderer\glBufferSetups</Filter>
+      <Filter>Platform independence\Graphics Wrappers\Buffer abstractions</Filter>
     </ClInclude>
     <ClInclude Include="vertexBuffer.h">
-      <Filter>game\renderer\glBufferSetups</Filter>
+      <Filter>Platform independence\Graphics Wrappers\Buffer abstractions</Filter>
     </ClInclude>
     <ClInclude Include="bufferLayout.h">
-      <Filter>game\renderer\glBufferSetups</Filter>
+      <Filter>Platform independence\Graphics Wrappers\Buffer abstractions</Filter>
     </ClInclude>
     <ClInclude Include="abstractShader.h">
-      <Filter>game\renderer\shaders\abstract</Filter>
+      <Filter>Low level renderer\shaders\abstract</Filter>
     </ClInclude>
     <ClInclude Include="abstractRenderObject.h">
-      <Filter>game\renderer\RenderObjects\abstract</Filter>
+      <Filter>Low level renderer\RenderObjects\abstract</Filter>
     </ClInclude>
     <ClInclude Include="abstractEntity.h">
-      <Filter>game\gamelogic\entities\abstracts</Filter>
+      <Filter>Gameplay foundation\entities\abstracts</Filter>
     </ClInclude>
     <ClInclude Include="basicShader.h">
-      <Filter>game\renderer\shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="type.h">
-      <Filter>game\gamelogic</Filter>
+      <Filter>Low level renderer\shaders</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
-      <Filter>game\renderer\dataParser</Filter>
-    </ClInclude>
-    <ClInclude Include="modelParser.h">
-      <Filter>game\renderer\dataParser</Filter>
+      <Filter>Resources\3D Model Resources</Filter>
     </ClInclude>
     <ClInclude Include="elementBuffer.h">
-      <Filter>game\renderer\glBufferSetups</Filter>
+      <Filter>Platform independence\Graphics Wrappers\Buffer abstractions</Filter>
     </ClInclude>
     <ClInclude Include="testRenderObject.h">
-      <Filter>game\renderer\RenderObjects</Filter>
+      <Filter>Low level renderer\RenderObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="instancedRenderObject.h">
+      <Filter>Low level renderer\RenderObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="simpleLightEntity.h">
+      <Filter>Gameplay foundation\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="simpleLightRender.h">
+      <Filter>Low level renderer\RenderObjects\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="abstractLightRender.h">
+      <Filter>Low level renderer\RenderObjects\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="abstractLightEntity.h">
+      <Filter>Gameplay foundation\entities\abstracts</Filter>
     </ClInclude>
     <ClInclude Include="constants.h">
       <Filter>other</Filter>
     </ClInclude>
+    <ClInclude Include="resourceManager.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
     <ClInclude Include="paths.h">
-      <Filter>other</Filter>
+      <Filter>Platform independence\Filesystem</Filter>
     </ClInclude>
-    <ClInclude Include="dataManager.h">
-      <Filter>game\renderer</Filter>
+    <ClInclude Include="errorhandler.h">
+      <Filter>core\Error handling</Filter>
     </ClInclude>
-    <ClInclude Include="instancedRenderObject.h">
-      <Filter>game\renderer\RenderObjects</Filter>
+    <ClInclude Include="eventHandler.h">
+      <Filter>core\User IO wrappers</Filter>
     </ClInclude>
-    <ClInclude Include="simpleLightEntity.h">
-      <Filter>game\gamelogic\entities</Filter>
+    <ClInclude Include="window.h">
+      <Filter>core\OS wrappers</Filter>
     </ClInclude>
-    <ClInclude Include="simpleLightRender.h">
-      <Filter>game\renderer\RenderObjects\lights</Filter>
+    <ClInclude Include="setupHandler.h">
+      <Filter>core\Module Startups</Filter>
     </ClInclude>
-    <ClInclude Include="abstractLightRender.h">
-      <Filter>game\renderer\RenderObjects\abstract</Filter>
+    <ClInclude Include="modelParser.h">
+      <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="abstractLightEntity.h">
-      <Filter>game\gamelogic\entities\abstracts</Filter>
+    <ClInclude Include="gameController.h">
+      <Filter>Gameplay foundation\Gameflow</Filter>
+    </ClInclude>
+    <ClInclude Include="type.h">
+      <Filter>Low level renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Low level renderer\Cameras</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

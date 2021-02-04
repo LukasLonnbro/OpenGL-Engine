@@ -133,7 +133,7 @@
   <ItemGroup>
     <ClCompile Include="bufferLayout.cpp" />
     <ClCompile Include="camera.cpp" />
-    <ClCompile Include="dataManager.cpp" />
+    <ClCompile Include="resourceManager.cpp" />
     <ClCompile Include="elementBuffer.cpp" />
     <ClCompile Include="modelParser.cpp" />
     <ClCompile Include="errorhandler.cpp" />
@@ -158,7 +158,7 @@
     <ClInclude Include="bufferLayout.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="simpleLightEntity.h" />
-    <ClInclude Include="dataManager.h" />
+    <ClInclude Include="resourceManager.h" />
     <ClInclude Include="elementBuffer.h" />
     <ClInclude Include="instancedRenderObject.h" />
     <ClInclude Include="modelParser.h" />

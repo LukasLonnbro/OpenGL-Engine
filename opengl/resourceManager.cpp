@@ -1,4 +1,4 @@
-#include "dataManager.h"
+#include "resourceManager.h"
 
 #include "basicShader.h"
 #include "testRenderObject.h"
@@ -54,7 +54,7 @@ std::vector<abstractEntity>* dataManager::loadEntities()
 
 	simpleLightRender* m_CubeRenderObject = new simpleLightRender(
 		shaderPrograms[0],
-		(paths::getModelPath() + "cube.obj").c_str(),
+		(paths::getModelPath() + "teapot.obj").c_str(),
 		glm::vec3(0.1f, 0.1f, 0.1f),
 		glm::vec3(0.5f, 0.0f, 0.5f),
 		glm::vec3(1.0f, 1.0f, 1.0f)
