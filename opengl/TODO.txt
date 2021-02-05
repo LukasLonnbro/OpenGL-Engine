@@ -1,0 +1,6 @@
+- RENDEROBJECT :: 
+	Don't like "Renderobjects" think they're superflous. Works for now but needs something more proper later. 
+- PATHS :: 
+	WTF is paths. Static variables everywhere. Works for now but that shit risky. 
+- LOGGER :: 
+	Think Im gonna start with a synchronous version, but make asynchronous in future.

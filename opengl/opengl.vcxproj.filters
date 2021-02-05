@@ -33,9 +33,6 @@
     <Filter Include="Low level renderer\RenderObjects\abstract">
       <UniqueIdentifier>{1b5fd7be-e42b-4d06-baf8-0fb86cdee0cb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Low level renderer\RenderObjects\lights">
-      <UniqueIdentifier>{a043892f-96f0-42f0-b64d-824dfaace105}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Low level renderer\shaders">
       <UniqueIdentifier>{5f332ebd-8302-4355-9497-3dc728b14237}</UniqueIdentifier>
     </Filter>
@@ -66,9 +63,6 @@
     <Filter Include="core\Custom Algorithms">
       <UniqueIdentifier>{b3b72efa-d53d-4f6d-ae6a-70d7f5ab639b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="core\OS wrappers">
-      <UniqueIdentifier>{ed8dc0ca-dcfc-462a-88b9-766bd8ccb306}</UniqueIdentifier>
-    </Filter>
     <Filter Include="core\Logs and debug">
       <UniqueIdentifier>{fc86c94f-b9c8-439e-bb32-2003749c34d9}</UniqueIdentifier>
     </Filter>
@@ -92,6 +86,21 @@
     </Filter>
     <Filter Include="Low level renderer\Cameras">
       <UniqueIdentifier>{e650f920-2c09-4022-924b-2249517b1426}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Low level renderer\lights">
+      <UniqueIdentifier>{a043892f-96f0-42f0-b64d-824dfaace105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Low level renderer\Texture">
+      <UniqueIdentifier>{ecc162e3-5f71-4c69-9e3a-2ab5e4e4eb59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Low level renderer\Shapes">
+      <UniqueIdentifier>{f1aeba79-c029-423f-8ff7-1bbc1213f534}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform independence\OS wrappers">
+      <UniqueIdentifier>{ed8dc0ca-dcfc-462a-88b9-766bd8ccb306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform independence\Filesystem\paths">
+      <UniqueIdentifier>{2f954e56-4e24-45fb-b1ec-4118ab7ec7e2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -125,17 +134,11 @@
     <ClCompile Include="resourceManager.cpp">
       <Filter>Resources</Filter>
     </ClCompile>
-    <ClCompile Include="Paths.cpp">
-      <Filter>Platform independence\Filesystem</Filter>
-    </ClCompile>
-    <ClCompile Include="errorhandler.cpp">
-      <Filter>core\Error handling</Filter>
-    </ClCompile>
     <ClCompile Include="eventHandler.cpp">
       <Filter>core\User IO wrappers</Filter>
     </ClCompile>
     <ClCompile Include="window.cpp">
-      <Filter>core\OS wrappers</Filter>
+      <Filter>Platform independence\OS wrappers</Filter>
     </ClCompile>
     <ClCompile Include="setupHandler.cpp">
       <Filter>core\Module Startups</Filter>
@@ -148,6 +151,27 @@
     </ClCompile>
     <ClCompile Include="camera.cpp">
       <Filter>Low level renderer\Cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Low level renderer\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Low level renderer\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorLogger.cpp">
+      <Filter>core\Logs and debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>core\Logs and debug</Filter>
+    </ClCompile>
+    <ClCompile Include="File.cpp">
+      <Filter>Platform independence\Filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Paths.cpp">
+      <Filter>Platform independence\Filesystem\paths</Filter>
+    </ClCompile>
+    <ClCompile Include="Path.cpp">
+      <Filter>Platform independence\Filesystem\paths</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -194,7 +218,7 @@
       <Filter>Gameplay foundation\entities</Filter>
     </ClInclude>
     <ClInclude Include="simpleLightRender.h">
-      <Filter>Low level renderer\RenderObjects\lights</Filter>
+      <Filter>Low level renderer\lights</Filter>
     </ClInclude>
     <ClInclude Include="abstractLightRender.h">
       <Filter>Low level renderer\RenderObjects\abstract</Filter>
@@ -208,17 +232,11 @@
     <ClInclude Include="resourceManager.h">
       <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="paths.h">
-      <Filter>Platform independence\Filesystem</Filter>
-    </ClInclude>
-    <ClInclude Include="errorhandler.h">
-      <Filter>core\Error handling</Filter>
-    </ClInclude>
     <ClInclude Include="eventHandler.h">
       <Filter>core\User IO wrappers</Filter>
     </ClInclude>
     <ClInclude Include="window.h">
-      <Filter>core\OS wrappers</Filter>
+      <Filter>Platform independence\OS wrappers</Filter>
     </ClInclude>
     <ClInclude Include="setupHandler.h">
       <Filter>core\Module Startups</Filter>
@@ -235,8 +253,32 @@
     <ClInclude Include="camera.h">
       <Filter>Low level renderer\Cameras</Filter>
     </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Low level renderer\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Low level renderer\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorLogger.h">
+      <Filter>core\Logs and debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>core\Logs and debug</Filter>
+    </ClInclude>
+    <ClInclude Include="File.h">
+      <Filter>Platform independence\Filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="paths.h">
+      <Filter>Platform independence\Filesystem\paths</Filter>
+    </ClInclude>
+    <ClInclude Include="Path.h">
+      <Filter>Platform independence\Filesystem\paths</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="TODO.txt" />
   </ItemGroup>
 </Project>

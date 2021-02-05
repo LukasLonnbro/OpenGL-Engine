@@ -133,10 +133,13 @@
   <ItemGroup>
     <ClCompile Include="bufferLayout.cpp" />
     <ClCompile Include="camera.cpp" />
+    <ClCompile Include="ErrorLogger.cpp" />
+    <ClCompile Include="File.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="Path.cpp" />
     <ClCompile Include="resourceManager.cpp" />
     <ClCompile Include="elementBuffer.cpp" />
     <ClCompile Include="modelParser.cpp" />
-    <ClCompile Include="errorhandler.cpp" />
     <ClCompile Include="eventHandler.cpp" />
     <ClCompile Include="gameController.cpp" />
     <ClCompile Include="Paths.cpp" />
@@ -144,8 +147,10 @@
     <ClCompile Include="renderer.cpp" />
     <ClCompile Include="setupHandler.cpp" />
     <ClCompile Include="abstractShader.cpp" />
+    <ClCompile Include="Shape.cpp" />
     <ClCompile Include="source.cpp" />
     <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="vertexArray.cpp" />
     <ClCompile Include="vertexBuffer.cpp" />
     <ClCompile Include="window.cpp" />
@@ -157,13 +162,17 @@
     <ClInclude Include="basicShader.h" />
     <ClInclude Include="bufferLayout.h" />
     <ClInclude Include="camera.h" />
+    <ClInclude Include="ErrorLogger.h" />
+    <ClInclude Include="File.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="Path.h" />
+    <ClInclude Include="Shape.h" />
     <ClInclude Include="simpleLightEntity.h" />
     <ClInclude Include="resourceManager.h" />
     <ClInclude Include="elementBuffer.h" />
     <ClInclude Include="instancedRenderObject.h" />
     <ClInclude Include="modelParser.h" />
     <ClInclude Include="abstractEntity.h" />
-    <ClInclude Include="errorhandler.h" />
     <ClInclude Include="eventHandler.h" />
     <ClInclude Include="gameController.h" />
     <ClInclude Include="constants.h" />
@@ -175,6 +184,7 @@
     <ClInclude Include="abstractShader.h" />
     <ClInclude Include="simpleLightRender.h" />
     <ClInclude Include="testRenderObject.h" />
+    <ClInclude Include="Triangle.h" />
     <ClInclude Include="type.h" />
     <ClInclude Include="vertexArray.h" />
     <ClInclude Include="vertexBuffer.h" />
@@ -182,6 +192,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="TODO.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
