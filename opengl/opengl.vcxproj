@@ -165,7 +165,10 @@
     <ClInclude Include="ErrorLogger.h" />
     <ClInclude Include="File.h" />
     <ClInclude Include="Logger.h" />
+    <ClInclude Include="Log_path.h" />
+    <ClInclude Include="Model_path.h" />
     <ClInclude Include="Path.h" />
+    <ClInclude Include="Shader_path.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="simpleLightEntity.h" />
     <ClInclude Include="resourceManager.h" />

@@ -9,12 +9,55 @@
 #include "gameController.h"
 #include "constants.h"
 
+
+#include "File.h"
+#include "Log_path.h"
+#include "Shader_path.h"
+#include "Model_path.h"
+
 #undef main
 
 #define STATIC_ALLOC
 
+void file_test(Path path) {
+	File test_file(path);
+	test_file.print_path();
+	test_file.write("This is one line.");
+}
 
-std::vector<unsigned int> indices = {
+int main() {
+	std::cout << "Hello world\n";
+	
+	Log_path test_log("test1.txt");
+	Model_path test_model("path_test.txt");
+	Shader_path test_shader("path_test.txt");
+
+	file_test(test_log);
+	file_test(test_model);
+	file_test(test_shader);
+
+	std::cout << "Press any key to run...";
+	std::string a;
+	std::cin >> a;
+
+
+
+	SDL_GL_SetSwapInterval(0);
+	
+	setupHandler::setupSDL();
+	SDL_Init(SDL_INIT_EVERYTHING);
+	window myWindow("maybe", (int)info::WIDTH(), (int)info::HEIGHT());
+
+	setupHandler::setupGL();
+
+	gameController controller(&myWindow);
+	controller.run();
+
+	//render3(myWindow);
+}
+
+
+/*std::vector<unsigned int> indices = {
 		 0,  1,  2,  0,  2,  3,
 		 4,  5,  6,  4,  6,  7,
 		 8,  9,  10, 8,  10, 11,
@@ -132,21 +175,4 @@ void render3(window w)
 
 	std::string a;
 	std::getline(std::cin, a);
-}
-
-int main() {
-	std::cout << "Hello world\n";
-	
-	SDL_GL_SetSwapInterval(0);
-	
-	setupHandler::setupSDL();
-	SDL_Init(SDL_INIT_EVERYTHING);
-	window myWindow("maybe", (int)info::WIDTH(), (int)info::HEIGHT());
-
-	setupHandler::setupGL();
-
-	gameController controller(&myWindow);
-	controller.run();
-
-	//render3(myWindow);
-}
+}*/

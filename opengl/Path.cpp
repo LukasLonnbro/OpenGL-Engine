@@ -1,21 +1,19 @@
 #include "Path.h"
 #include "paths.h"
 
-Path::Path() 
+
+Path::Path(): m_Dependency_path(paths::getDependencyPath()), m_Exec_path(paths::getExecPath())
 {
 }
 
-void Path::set_path_set() { 
-	path_is_set = true; 
+Path::~Path()
+{
 }
 
-void Path::model_path(std::string model_name) {
-	m_Path = paths::getModelPath() + model_name;
-	set_path_set();
+bool Path::is_set() {
+	return m_Path_is_set;
 }
-void Path::get_shader_path(std::string shader_name) {
-	m_Path = paths::getModelPath() + shader_name;
-}
-void Path::get_texture_path(std::string texture_name) {
-	m_Path = paths::getModelPath() + texture_name;
+
+std::string Path::get_as_string() {
+	return m_Path;
 }

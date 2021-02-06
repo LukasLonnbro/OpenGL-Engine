@@ -1,5 +1,4 @@
 #include "abstractShader.h"
-#include "errorhandler.h"
 #include "paths.h"
 
 #include <gl/glew.h>
@@ -75,7 +74,9 @@ void abstractShader::compileAndLink(const std::string vertPath, const std::strin
 		std::getline(std::cin, a);
 
 		// Use the infoLog as you see fit.
-		errorhandler::addError(&infoLog[0], FATALERROR, "Vertex shader compilation failed.");
+		std::cout << "Vertex shader compilation failed.";
+		int alk;
+		std::cin >> alk;
 
 		// In this simple program, we'll just leave
 		return;
@@ -112,8 +113,9 @@ void abstractShader::compileAndLink(const std::string vertPath, const std::strin
 			std::cout << infoLog[i];
 
 		// Use the infoLog as you see fit.
-		errorhandler::addError(&infoLog[0], FATALERROR, "Fragment shader compilation failed.");
-
+		std::cout << "Fragment shader compilation failed.";
+		int a;
+		std::cin >> a;
 		// In this simple program, we'll just leave
 		return;
 	}

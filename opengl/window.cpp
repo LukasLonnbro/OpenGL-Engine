@@ -1,6 +1,4 @@
 #include "window.h"
-#include "errorhandler.h"
-
 #include <iostream>
 
 window::window(const char* titl, int w, int h)
@@ -13,7 +11,7 @@ window::window(const char* titl, int w, int h)
 		if (SDL_Init(SDL_INIT_VIDEO) < 0) 
 		{
 			//ERROR HANDLING - FATAL
-			errorhandler::addError(SDL_GetError(), FATALERROR);
+			//errorhandler::addError(SDL_GetError(), FATALERROR);
 		} 
 	}
 	createWindow();
@@ -31,14 +29,14 @@ void window::createWindow()
 
 	if (!window_holder)
 	{
-		errorhandler::addError(SDL_GetError(), FATALERROR, "(CLASS: WINDOW) Window Creation failed: ");
+		//errorhandler::addError(SDL_GetError(), FATALERROR, "(CLASS: WINDOW) Window Creation failed: ");
 	}
 
 	context_holder = SDL_GL_CreateContext(window_holder);
 
 	if (!context_holder)
 	{
-		errorhandler::addError(SDL_GetError(), FATALERROR, "(CLASS: WINDOW) Context creation failed: ");
+		//errorhandler::addError(SDL_GetError(), FATALERROR, "(CLASS: WINDOW) Context creation failed: ");
 	}
 }
 

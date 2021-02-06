@@ -1,5 +1,4 @@
 #include "setupHandler.h"
-#include "errorhandler.h"
 #include "window.h"
 
 #include <SDL.h>
@@ -46,8 +45,7 @@ void setupHandler::setupGL()
 	if (err != GLEW_OK)
 	{
 		const GLubyte *errString = glewGetErrorString(err);
-		errorhandler::addError(errString, FATALERROR, "(CLASS: SETUPHANDLER) Glew initalization failed: ");
-		std::cout << "stuff.";
+		std::cout << "stuff went wrong. ERROR in setupHandler (line 48)";
 	}
 
 	glFrontFace(GL_CCW);

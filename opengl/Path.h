@@ -2,23 +2,21 @@
 
 #include <string>
 
-//For now just a wrapper for a string. But in case it becomes relevant I wanna make file independant of hard coded paths.
-//Maybe Im stupid.
-//This needs to be more clever. 
+//Path superclass with A specific path for each children. So Model_path, Texture_path etc.
+//Currently relying on the mess that is "paths.h"
 class Path
 {
 public:
 	Path();
-
-	//Takes a name and generates a path to relevant folder.
-	void model_path(std::string model_name);
-	void get_shader_path(std::string shader_name);
-	void get_texture_path(std::string texture_name);
-
-	//Dude seriously, naming conventions my guy.
-	void set_path_set();
-private:
+	~Path();
+	
+	//Bool that keeps track if the path has been initialized properly.
+	virtual bool is_set();
+	virtual std::string  get_as_string();
+protected:
 	std::string m_Path;
-	bool path_is_set;
+	std::string m_Dependency_path;
+	std::string m_Exec_path;
+	bool m_Path_is_set;
 };
 

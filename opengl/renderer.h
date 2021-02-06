@@ -3,7 +3,6 @@
 #include "abstractEntity.h"
 #include "abstractLightEntity.h"
 
-#include "errorhandler.h"
 #include "camera.h"
 
 #include <vector>

@@ -102,6 +102,9 @@
     <Filter Include="Platform independence\Filesystem\paths">
       <UniqueIdentifier>{2f954e56-4e24-45fb-b1ec-4118ab7ec7e2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform independence\Filesystem\paths\Super">
+      <UniqueIdentifier>{60bfae07-26ef-486e-a8bc-328caba3e6ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="player.cpp">
@@ -167,11 +170,11 @@
     <ClCompile Include="File.cpp">
       <Filter>Platform independence\Filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="Paths.cpp">
-      <Filter>Platform independence\Filesystem\paths</Filter>
-    </ClCompile>
     <ClCompile Include="Path.cpp">
-      <Filter>Platform independence\Filesystem\paths</Filter>
+      <Filter>Platform independence\Filesystem\paths\Super</Filter>
+    </ClCompile>
+    <ClCompile Include="Paths.cpp">
+      <Filter>Platform independence\Filesystem\paths\Super</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -268,10 +271,19 @@
     <ClInclude Include="File.h">
       <Filter>Platform independence\Filesystem</Filter>
     </ClInclude>
-    <ClInclude Include="paths.h">
+    <ClInclude Include="Log_path.h">
       <Filter>Platform independence\Filesystem\paths</Filter>
     </ClInclude>
     <ClInclude Include="Path.h">
+      <Filter>Platform independence\Filesystem\paths\Super</Filter>
+    </ClInclude>
+    <ClInclude Include="paths.h">
+      <Filter>Platform independence\Filesystem\paths\Super</Filter>
+    </ClInclude>
+    <ClInclude Include="Model_path.h">
+      <Filter>Platform independence\Filesystem\paths</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader_path.h">
       <Filter>Platform independence\Filesystem\paths</Filter>
     </ClInclude>
   </ItemGroup>
