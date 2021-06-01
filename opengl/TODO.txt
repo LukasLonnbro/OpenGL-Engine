@@ -5,6 +5,7 @@
 	Remove entirely, put into Path superclass instead.
 - LOGGER :: 
 	Think Im gonna start with a synchronous version, but make asynchronous in future.
+	Threadsafe stuff seems annoying :S
 - ERROR HANDLING :: 
 	Shader setup
 	Window

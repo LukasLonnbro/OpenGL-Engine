@@ -176,6 +176,9 @@
     <ClCompile Include="Paths.cpp">
       <Filter>Platform independence\Filesystem\paths\Super</Filter>
     </ClCompile>
+    <ClCompile Include="Singleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="player.h">
@@ -285,6 +288,9 @@
     </ClInclude>
     <ClInclude Include="Shader_path.h">
       <Filter>Platform independence\Filesystem\paths</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

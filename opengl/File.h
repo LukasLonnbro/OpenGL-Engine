@@ -7,9 +7,19 @@
 #include <iostream>
 #include <fstream>
 
-//Think of a good way to do this. Maybe set a working directory and then work locally. 
+/* 
+	Think of a good way to do this. Maybe set a working directory and then work locally. 
+	For now just a wrapper for fstream. 
 
-//For now just a wrapper for fstream. 
+	Takes a Path and creates a file at that path.
+
+	__ EXAMPLE __
+
+	Log_path path("test_log.txt");
+	File m_File(path);
+	m_File.write("Hello World!");
+*/
+
 class File
 {
 public:

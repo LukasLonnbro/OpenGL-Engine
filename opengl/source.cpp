@@ -9,11 +9,12 @@
 #include "gameController.h"
 #include "constants.h"
 
-
 #include "File.h"
 #include "Log_path.h"
 #include "Shader_path.h"
 #include "Model_path.h"
+
+#include "ErrorLogger.h"
 
 #undef main
 
@@ -36,10 +37,13 @@ int main() {
 	file_test(test_model);
 	file_test(test_shader);
 
+	ErrorLogger log;
+	log.push_error("We have an error that does stuff.", "In main. Line 45.");
+	log.push_error("We have an error that does stuff.", "In main. Line 45.");
+
 	std::cout << "Press any key to run...";
 	std::string a;
 	std::cin >> a;
-
 
 
 	SDL_GL_SetSwapInterval(0);
