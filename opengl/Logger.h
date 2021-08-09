@@ -2,6 +2,7 @@
 
 #include <fstream>
 
+#include "Singleton.h"
 #include "Log_path.h"
 #include "File.h"
 
@@ -18,22 +19,21 @@
 	 Pushes string to the log file.
 
 	 Use file and log paths to do dis shit. 
+	 TODO : This kinda ugly, might need a revisit to filesystem
 	 TODO : make asynchrnous. Not sure how to handle threads yet thou.
 	 TODO : .txt extension check
  */
 
-class Logger
+class Logger : public Singleton<Logger>
 {
-public:
-	Logger(std::string log_name);
-	virtual ~Logger();
+	friend class Singleton<Logger>;
 
+public:
 	void push(std::string);
+	void init(Path path);
 
 protected:
-	Log_path m_Logpath;
-	File	 m_File;
-
-private: 
+	Logger() {}
+	File m_File;
 
 };

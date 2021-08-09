@@ -23,12 +23,15 @@
 class File
 {
 public:
+	File();
 	File(Path path);
 	~File(){}
 
 	void print_path() { std::cout << m_Path.get_as_string() << std::endl; }
-
+	
+	void late_init_path(Path path);
 	void write(std::string to_write);
+
 private: 
 	Path m_Path;
 	std::fstream m_File;

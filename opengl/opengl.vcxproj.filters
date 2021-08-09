@@ -66,9 +66,6 @@
     <Filter Include="core\Logs and debug">
       <UniqueIdentifier>{fc86c94f-b9c8-439e-bb32-2003749c34d9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="core\Module Startups">
-      <UniqueIdentifier>{0a6143e9-0287-4a91-bafb-38e3e7cab91e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resources">
       <UniqueIdentifier>{bb383918-b227-448a-b4f9-5b1d004004a0}</UniqueIdentifier>
     </Filter>
@@ -104,6 +101,9 @@
     </Filter>
     <Filter Include="Platform independence\Filesystem\paths\Super">
       <UniqueIdentifier>{60bfae07-26ef-486e-a8bc-328caba3e6ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\Managers %28modules%29">
+      <UniqueIdentifier>{0a6143e9-0287-4a91-bafb-38e3e7cab91e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -144,7 +144,7 @@
       <Filter>Platform independence\OS wrappers</Filter>
     </ClCompile>
     <ClCompile Include="setupHandler.cpp">
-      <Filter>core\Module Startups</Filter>
+      <Filter>core\Managers %28modules%29</Filter>
     </ClCompile>
     <ClCompile Include="modelParser.cpp">
       <Filter>Resources</Filter>
@@ -175,9 +175,6 @@
     </ClCompile>
     <ClCompile Include="Paths.cpp">
       <Filter>Platform independence\Filesystem\paths\Super</Filter>
-    </ClCompile>
-    <ClCompile Include="Singleton.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -245,7 +242,7 @@
       <Filter>Platform independence\OS wrappers</Filter>
     </ClInclude>
     <ClInclude Include="setupHandler.h">
-      <Filter>core\Module Startups</Filter>
+      <Filter>core\Managers %28modules%29</Filter>
     </ClInclude>
     <ClInclude Include="modelParser.h">
       <Filter>Resources</Filter>

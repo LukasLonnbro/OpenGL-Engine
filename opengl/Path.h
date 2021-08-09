@@ -4,6 +4,8 @@
 
 //Path superclass with A specific path for each children. So Model_path, Texture_path etc.
 //Currently relying on the mess that is "paths.h"
+
+// TODO : Remove paths
 class Path
 {
 public:
@@ -13,6 +15,7 @@ public:
 	//Bool that keeps track if the path has been initialized properly.
 	virtual bool is_set();
 	virtual std::string  get_as_string();
+	//virtual std::string get_as_string(std::string file_name);
 protected:
 	std::string m_Path;
 	std::string m_Dependency_path;

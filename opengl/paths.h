@@ -4,6 +4,9 @@
 #include <Shlwapi.h>
 
 //UGLY AS HELL FIX
+
+// Will be removed in future.
+
 class paths
 {
 public:
