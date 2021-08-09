@@ -1,61 +1,12 @@
-#include <iostream>
-#include <string>
-
-#include <GL/glew.h>
-#include <SDL.h>
-
-#include "window.h"
-#include "setupHandler.h"
-#include "gameController.h"
-#include "constants.h"
-
-#include "File.h"
-#include "Log_path.h"
-#include "Shader_path.h"
-#include "Model_path.h"
-
-#include "ErrorLogger.h"
-
 #undef main
 
 #define STATIC_ALLOC
 
-void file_test(Path path) {
-	File test_file(path);
-	test_file.print_path();
-	test_file.write("This is one line.");
-}
+#include "Mainloop.h"
 
 int main() {
-	std::cout << "Hello world\n";
-	
-	Log_path test_log("test1.txt");
-	Model_path test_model("path_test.txt");
-	Shader_path test_shader("path_test.txt");
-
-	file_test(test_log);
-	file_test(test_model);
-	file_test(test_shader);
-
-	Singleton<ErrorLogger>::get_instance().push_error("We have an error that does stuff.", "In main. Line 45.");
-
-	std::cout << "Press any key to run...";
-	std::string a;
-	std::cin >> a;
-
-
-	SDL_GL_SetSwapInterval(0);
-	
-	setupHandler::setupSDL();
-	SDL_Init(SDL_INIT_EVERYTHING);
-	window myWindow("maybe", (int)info::WIDTH(), (int)info::HEIGHT());
-
-	setupHandler::setupGL();
-
-	gameController controller(&myWindow);
-	controller.run();
-
-	//render3(myWindow);
+	Mainloop mainloop;
+	mainloop.run();
 }
 
 

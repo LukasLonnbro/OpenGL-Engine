@@ -11,7 +11,8 @@ Logger at logs/Errorlog.txt
 
 (For usage see Logger.h)
 
-TODO :
+TODO : Add more functionality than logging.
+TODO : Add halt functionality outside of main loop. How?
 TODO : Add clear function.
 TODO : Initiate a new log every time it starts. Or at least give the option to.
 TODO : Add date and time of creation to log name.
@@ -19,9 +20,9 @@ TODO : Add date and time of creation to log name.
 TODO : Graphical interface?
 */
 
-class ErrorLogger : public Singleton<ErrorLogger>
+class ErrorManager : public Singleton<ErrorManager>
 {
-	friend class Singleton<ErrorLogger>;
+	friend class Singleton<ErrorManager>;
 
 public:
 	void push_fatal(std::string error, std::string function_info);
@@ -29,7 +30,7 @@ public:
 	void push_warning(std::string error, std::string function_info);
 
 private:
-	ErrorLogger() : m_File(Log_path("Errorlogger.txt")) {}
-	~ErrorLogger() {}
+	ErrorManager() : m_File(Log_path("Errorlogger.txt")) {}
+	~ErrorManager() {}
 	File m_File;
 };

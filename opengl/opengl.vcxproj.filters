@@ -57,9 +57,6 @@
     <Filter Include="core\User IO wrappers">
       <UniqueIdentifier>{a42b509d-de38-48e6-bb11-b9f9c5d613ec}</UniqueIdentifier>
     </Filter>
-    <Filter Include="core\Memory Management">
-      <UniqueIdentifier>{a67949e0-07cc-4003-a625-509856c705c5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="core\Custom Algorithms">
       <UniqueIdentifier>{b3b72efa-d53d-4f6d-ae6a-70d7f5ab639b}</UniqueIdentifier>
     </Filter>
@@ -105,13 +102,19 @@
     <Filter Include="core\Managers %28modules%29">
       <UniqueIdentifier>{0a6143e9-0287-4a91-bafb-38e3e7cab91e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="core\Error managing">
+      <UniqueIdentifier>{2dfad3ce-7c65-4f11-bc5a-e3ee318fa533}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\Helper classes">
+      <UniqueIdentifier>{dc8a8fe3-eabe-4f34-8247-5b83b7253459}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\Memory Management">
+      <UniqueIdentifier>{a67949e0-07cc-4003-a625-509856c705c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="player.cpp">
       <Filter>Gameplay foundation\entities</Filter>
-    </ClCompile>
-    <ClCompile Include="source.cpp">
-      <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="renderer.cpp">
       <Filter>Low level renderer</Filter>
@@ -161,9 +164,6 @@
     <ClCompile Include="Shape.cpp">
       <Filter>Low level renderer\Shapes</Filter>
     </ClCompile>
-    <ClCompile Include="ErrorLogger.cpp">
-      <Filter>core\Logs and debug</Filter>
-    </ClCompile>
     <ClCompile Include="Logger.cpp">
       <Filter>core\Logs and debug</Filter>
     </ClCompile>
@@ -175,6 +175,15 @@
     </ClCompile>
     <ClCompile Include="Paths.cpp">
       <Filter>Platform independence\Filesystem\paths\Super</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorManager.cpp">
+      <Filter>core\Error managing</Filter>
+    </ClCompile>
+    <ClCompile Include="Mainloop.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="source.cpp">
+      <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -262,9 +271,6 @@
     <ClInclude Include="Shape.h">
       <Filter>Low level renderer\Shapes</Filter>
     </ClInclude>
-    <ClInclude Include="ErrorLogger.h">
-      <Filter>core\Logs and debug</Filter>
-    </ClInclude>
     <ClInclude Include="Logger.h">
       <Filter>core\Logs and debug</Filter>
     </ClInclude>
@@ -286,8 +292,14 @@
     <ClInclude Include="Shader_path.h">
       <Filter>Platform independence\Filesystem\paths</Filter>
     </ClInclude>
-    <ClInclude Include="Singleton.h">
+    <ClInclude Include="ErrorManager.h">
+      <Filter>core\Error managing</Filter>
+    </ClInclude>
+    <ClInclude Include="Mainloop.h">
       <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>core\Helper classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

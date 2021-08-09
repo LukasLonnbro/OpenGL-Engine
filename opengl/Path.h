@@ -5,7 +5,9 @@
 //Path superclass with A specific path for each children. So Model_path, Texture_path etc.
 //Currently relying on the mess that is "paths.h"
 
-// TODO : Remove paths
+// Might need a revisit.
+
+// TODO : Remove "paths"
 class Path
 {
 public:
