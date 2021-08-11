@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -137,6 +137,7 @@
     <ClCompile Include="File.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Mainloop.cpp" />
+    <ClCompile Include="OpenGLManager.cpp" />
     <ClCompile Include="Path.cpp" />
     <ClCompile Include="resourceManager.cpp" />
     <ClCompile Include="elementBuffer.cpp" />
@@ -146,7 +147,7 @@
     <ClCompile Include="Paths.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="renderer.cpp" />
-    <ClCompile Include="setupHandler.cpp" />
+    <ClCompile Include="SDLManager.cpp" />
     <ClCompile Include="abstractShader.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="source.cpp" />
@@ -169,7 +170,10 @@
     <ClInclude Include="Log_path.h" />
     <ClInclude Include="Mainloop.h" />
     <ClInclude Include="Model_path.h" />
+    <ClInclude Include="Modules.h" />
+    <ClInclude Include="OpenGLManager.h" />
     <ClInclude Include="Path.h" />
+    <ClInclude Include="SDLManager.h" />
     <ClInclude Include="Shader_path.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="simpleLightEntity.h" />
@@ -185,7 +189,6 @@
     <ClInclude Include="paths.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="renderer.h" />
-    <ClInclude Include="setupHandler.h" />
     <ClInclude Include="abstractShader.h" />
     <ClInclude Include="simpleLightRender.h" />
     <ClInclude Include="Singleton.h" />

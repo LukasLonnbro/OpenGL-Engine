@@ -6,14 +6,14 @@
 class gameController
 {
 public:
-	gameController(const window * aWindow);
+	gameController(const Window * aWindow);
 	~gameController();
 
 	int update();
 	void run();
 
 private: 
-	const window * m_Window;
+	const Window * m_Window;
 	renderer m_Renderer;
 
 	int lastTick;

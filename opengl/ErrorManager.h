@@ -33,4 +33,6 @@ private:
 	ErrorManager() : m_File(Log_path("Errorlogger.txt")) {}
 	~ErrorManager() {}
 	File m_File;
+
+	void log(std::string to_log, std::string function_info);
 };

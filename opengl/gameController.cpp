@@ -26,7 +26,7 @@
 // FUTURE IMPLEMENTATIONS
 // phsyics engine
 
-gameController::gameController(const window * aWindow) : lastTick(0)
+gameController::gameController(const Window * aWindow) : lastTick(0)
 {
 	m_Window = aWindow;
 }

@@ -146,9 +146,6 @@
     <ClCompile Include="window.cpp">
       <Filter>Platform independence\OS wrappers</Filter>
     </ClCompile>
-    <ClCompile Include="setupHandler.cpp">
-      <Filter>core\Managers %28modules%29</Filter>
-    </ClCompile>
     <ClCompile Include="modelParser.cpp">
       <Filter>Resources</Filter>
     </ClCompile>
@@ -184,6 +181,12 @@
     </ClCompile>
     <ClCompile Include="source.cpp">
       <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLManager.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLManager.cpp">
+      <Filter>core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -250,9 +253,6 @@
     <ClInclude Include="window.h">
       <Filter>Platform independence\OS wrappers</Filter>
     </ClInclude>
-    <ClInclude Include="setupHandler.h">
-      <Filter>core\Managers %28modules%29</Filter>
-    </ClInclude>
     <ClInclude Include="modelParser.h">
       <Filter>Resources</Filter>
     </ClInclude>
@@ -300,6 +300,15 @@
     </ClInclude>
     <ClInclude Include="Singleton.h">
       <Filter>core\Helper classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLManager.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLManager.h">
+      <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

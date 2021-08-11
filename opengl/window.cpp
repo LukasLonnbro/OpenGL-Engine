@@ -1,42 +1,40 @@
 #include "window.h"
+
+#include "ErrorManager.h"
+
 #include <iostream>
 
-window::window(const char* titl, int w, int h)
+//TODO : Currently relys on SDL, would be nice to not, but that's a huge change that isn't needed right now.
+
+Window::Window(std::string title, int w, int h)
 {
-	title = titl;
+	m_Title = title;
 	width = w;
 	height = h;
-	if (!SDL_WasInit(SDL_INIT_VIDEO))
-	{
-		if (SDL_Init(SDL_INIT_VIDEO) < 0) 
-		{
-			//ERROR HANDLING - FATAL
-			//errorhandler::addError(SDL_GetError(), FATALERROR);
-		} 
-	}
-	createWindow();
+
+	create_window();
 }
-window::~window()
+Window::~Window()
 {
 	//ERROR HANDLING - possible memory leakage.
 	SDL_GL_DeleteContext(context_holder);
 	SDL_DestroyWindow(window_holder);
 }
 
-void window::createWindow()
+void Window::create_window()
 {
-	window_holder = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_OPENGL);
+	window_holder = SDL_CreateWindow(m_Title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_OPENGL);
 
 	if (!window_holder)
 	{
-		//errorhandler::addError(SDL_GetError(), FATALERROR, "(CLASS: WINDOW) Window Creation failed: ");
+		Singleton<ErrorManager>::get_instance().push_fatal(SDL_GetError(), "Class: window.cpp in create_window()");
 	}
 
 	context_holder = SDL_GL_CreateContext(window_holder);
 
 	if (!context_holder)
 	{
-		//errorhandler::addError(SDL_GetError(), FATALERROR, "(CLASS: WINDOW) Context creation failed: ");
+		ErrorManager::get_instance().push_fatal(SDL_GetError(), "Class: window.cpp");
 	}
 }
 
