@@ -63,18 +63,6 @@
     <Filter Include="core\Logs and debug">
       <UniqueIdentifier>{fc86c94f-b9c8-439e-bb32-2003749c34d9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resources">
-      <UniqueIdentifier>{bb383918-b227-448a-b4f9-5b1d004004a0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\3D Model Resources">
-      <UniqueIdentifier>{28347bf3-9615-4ec4-bce3-723dff53fdc3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\Textures">
-      <UniqueIdentifier>{cf25e47e-f76c-4de3-b4e1-da4a6164af4f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\Material">
-      <UniqueIdentifier>{7ee7aa00-2aa9-4a98-a59f-80d116c869c2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Gameplay foundation\Gameflow">
       <UniqueIdentifier>{4727eb9e-ac31-4ef9-a258-891133cf2b17}</UniqueIdentifier>
     </Filter>
@@ -99,9 +87,6 @@
     <Filter Include="Platform independence\Filesystem\paths\Super">
       <UniqueIdentifier>{60bfae07-26ef-486e-a8bc-328caba3e6ff}</UniqueIdentifier>
     </Filter>
-    <Filter Include="core\Managers %28modules%29">
-      <UniqueIdentifier>{0a6143e9-0287-4a91-bafb-38e3e7cab91e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="core\Error managing">
       <UniqueIdentifier>{2dfad3ce-7c65-4f11-bc5a-e3ee318fa533}</UniqueIdentifier>
     </Filter>
@@ -110,6 +95,27 @@
     </Filter>
     <Filter Include="core\Memory Management">
       <UniqueIdentifier>{a67949e0-07cc-4003-a625-509856c705c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Manager">
+      <UniqueIdentifier>{bb383918-b227-448a-b4f9-5b1d004004a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Manager\3D Model Resources">
+      <UniqueIdentifier>{28347bf3-9615-4ec4-bce3-723dff53fdc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Manager\Textures">
+      <UniqueIdentifier>{cf25e47e-f76c-4de3-b4e1-da4a6164af4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Manager\Material">
+      <UniqueIdentifier>{7ee7aa00-2aa9-4a98-a59f-80d116c869c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\Core startup managers">
+      <UniqueIdentifier>{0a6143e9-0287-4a91-bafb-38e3e7cab91e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{8d1d5019-03c6-4ca6-b93a-62b8414c3ecd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Manager\Allocation Management">
+      <UniqueIdentifier>{e2f51492-10bf-4f1c-a983-cb2e0821108e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -132,25 +138,16 @@
       <Filter>Low level renderer\shaders\abstract</Filter>
     </ClCompile>
     <ClCompile Include="Mesh.cpp">
-      <Filter>Resources\3D Model Resources</Filter>
+      <Filter>Resource Manager\3D Model Resources</Filter>
     </ClCompile>
     <ClCompile Include="elementBuffer.cpp">
       <Filter>Platform independence\Graphics Wrappers\Buffer abstractions</Filter>
-    </ClCompile>
-    <ClCompile Include="resourceManager.cpp">
-      <Filter>Resources</Filter>
-    </ClCompile>
-    <ClCompile Include="eventHandler.cpp">
-      <Filter>core\User IO wrappers</Filter>
     </ClCompile>
     <ClCompile Include="window.cpp">
       <Filter>Platform independence\OS wrappers</Filter>
     </ClCompile>
     <ClCompile Include="modelParser.cpp">
-      <Filter>Resources</Filter>
-    </ClCompile>
-    <ClCompile Include="gameController.cpp">
-      <Filter>Gameplay foundation\Gameflow</Filter>
+      <Filter>Resource Manager</Filter>
     </ClCompile>
     <ClCompile Include="camera.cpp">
       <Filter>Low level renderer\Cameras</Filter>
@@ -183,10 +180,19 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="OpenGLManager.cpp">
-      <Filter>core</Filter>
+      <Filter>core\Core startup managers</Filter>
     </ClCompile>
     <ClCompile Include="SDLManager.cpp">
-      <Filter>core</Filter>
+      <Filter>core\Core startup managers</Filter>
+    </ClCompile>
+    <ClCompile Include="resourceManager.cpp">
+      <Filter>Resource Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Timeline_manager.cpp">
+      <Filter>Gameplay foundation\Gameflow</Filter>
+    </ClCompile>
+    <ClCompile Include="USER_IO.cpp">
+      <Filter>core\User IO wrappers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -218,7 +224,7 @@
       <Filter>Low level renderer\shaders</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
-      <Filter>Resources\3D Model Resources</Filter>
+      <Filter>Resource Manager\3D Model Resources</Filter>
     </ClInclude>
     <ClInclude Include="elementBuffer.h">
       <Filter>Platform independence\Graphics Wrappers\Buffer abstractions</Filter>
@@ -244,20 +250,11 @@
     <ClInclude Include="constants.h">
       <Filter>other</Filter>
     </ClInclude>
-    <ClInclude Include="resourceManager.h">
-      <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="eventHandler.h">
-      <Filter>core\User IO wrappers</Filter>
-    </ClInclude>
     <ClInclude Include="window.h">
       <Filter>Platform independence\OS wrappers</Filter>
     </ClInclude>
     <ClInclude Include="modelParser.h">
-      <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="gameController.h">
-      <Filter>Gameplay foundation\Gameflow</Filter>
+      <Filter>Resource Manager</Filter>
     </ClInclude>
     <ClInclude Include="type.h">
       <Filter>Low level renderer</Filter>
@@ -305,10 +302,22 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="OpenGLManager.h">
-      <Filter>core</Filter>
+      <Filter>core\Core startup managers</Filter>
     </ClInclude>
     <ClInclude Include="SDLManager.h">
-      <Filter>core</Filter>
+      <Filter>core\Core startup managers</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceManager.h">
+      <Filter>Resource Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="StackAllocator.h">
+      <Filter>Resource Manager\Allocation Management</Filter>
+    </ClInclude>
+    <ClInclude Include="Timeline_manager.h">
+      <Filter>Gameplay foundation\Gameflow</Filter>
+    </ClInclude>
+    <ClInclude Include="USER_IO.h">
+      <Filter>core\User IO wrappers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

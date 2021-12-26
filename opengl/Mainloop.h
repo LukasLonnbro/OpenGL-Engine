@@ -1,4 +1,8 @@
 #pragma once
+
+#include "renderer.h"
+#include "window.h"
+
 class Mainloop
 {
 public:
@@ -8,5 +12,12 @@ public:
 	void run();
 private:
 	void init();
+
+	const Window * m_Window;
+	renderer m_Renderer;
+
+	int lastTick;
+	int frameTick;
+	int frames;
 };
 

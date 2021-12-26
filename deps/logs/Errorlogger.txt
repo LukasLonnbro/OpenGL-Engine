@@ -1,1 +1,0 @@
-_FATAL_:  || ( In OpenGLManager::start_up() )

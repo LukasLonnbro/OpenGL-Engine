@@ -3,8 +3,11 @@
 #include "renderer.h"
 #include "window.h"
 
+// Should probably have a different name. Or maybe this is entirely superflous. 
+//  Is this not just a main loop really.
+
 class gameController
-{
+{/*
 public:
 	gameController(const Window * aWindow);
 	~gameController();
@@ -18,6 +21,6 @@ private:
 
 	int lastTick;
 	int frameTick;
-	int frames;
+	int frames;*/
 };
 

@@ -26,11 +26,11 @@
 	Buffer setups?
 */
 
-dataManager::dataManager() : priorityIndex(0), staticAllocIndex(0)
+ResourceManager::ResourceManager() : priorityIndex(0), staticAllocIndex(0)
 {
 }
 // OBS : using destructor, care for exceptions when using copy and assignment constructors.
-dataManager::~dataManager()
+ResourceManager::~ResourceManager()
 {
 	for (auto v : shaderPrograms)
 		delete v;
@@ -42,7 +42,7 @@ dataManager::~dataManager()
 // TODO :
 // Automate creation based on text file.
 // Add static allocation based on entity preference.
-std::vector<abstractEntity>* dataManager::loadEntities()
+std::vector<abstractEntity>* ResourceManager::loadEntities()
 {
 	//Probably doesn't have to be heap allocated. 
 	basicShader* shader = new basicShader;
@@ -71,6 +71,6 @@ std::vector<abstractEntity>* dataManager::loadEntities()
 	return &entities;
 }
 
-void dataManager::loadMap(/*MAP map = null*/)
+void ResourceManager::loadMap(/*MAP map = null*/)
 {
 }

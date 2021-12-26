@@ -5,7 +5,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 #include "constants.h"
-#include "eventHandler.h"
+#include "USER_IO.h"
 
 #include <iostream>
 
@@ -105,7 +105,7 @@ void camera::rotateByMouse()
 	front.z = cos(angleY) * sin(angleX);
 	front = glm::normalize(front);
 
-	eventHandler::setMousePos(info::WIDTH() / 2, info::HEIGHT() / 2);
+	USER_IO::setMousePos(info::WIDTH() / 2, info::HEIGHT() / 2);
 }
 
 

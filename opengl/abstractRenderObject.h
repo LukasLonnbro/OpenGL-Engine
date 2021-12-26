@@ -13,7 +13,10 @@
 
 #include <iostream>
 
-#define ABSTRACT 0x01
+#ifndef ABSTRACT
+	#define ABSTRACT 0x01
+#endif // !1
+
 
 class abstractRenderObject
 {

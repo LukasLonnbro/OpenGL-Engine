@@ -1,12 +1,14 @@
-#undef main
-
 #define STATIC_ALLOC
 
 #include "Mainloop.h"
 
+#undef main
+
 int main() {
 	Mainloop mainloop;
 	mainloop.run();
+
+	return 0;
 }
 
 
