@@ -10,14 +10,15 @@ public:
 	~Mainloop();
 
 	void run();
+
+	void frame_count();
 private:
 	void init();
 
 	const Window * m_Window;
 	renderer m_Renderer;
 
-	int lastTick;
-	int frameTick;
+	int last_tick;
 	int frames;
 };
 

@@ -1,6 +1,7 @@
 #include "USER_IO.h"
 
 #include <SDL.h>
+#include <iostream>
 
 // Messy, fix naming convention.
 Keyboard USER_IO::m_Keyboard;
@@ -34,7 +35,7 @@ void USER_IO::update()
 			case SDLK_q: m_Keyboard.q = true; break;
 			case SDLK_r: m_Keyboard.r = true; break;
 			case SDLK_s: m_Keyboard.s = true; break;
-			case SDLK_w: m_Keyboard.w = true; break;
+			case SDLK_w: m_Keyboard.w = true; std::cout << "w"; break;
 			case SDLK_x: m_Keyboard.x = true; break;
 			case SDLK_SPACE: m_Keyboard.space = true; break;
 			case SDLK_LSHIFT: m_Keyboard.shift = true; break;
